@@ -1,0 +1,10 @@
+.container{
+  background-color: black;
+  color: #FFBB00;
+  width: 90%;
+  margin: 30px auto;
+}
+.name{
+  color: white;
+  font-weight: bold;
+}

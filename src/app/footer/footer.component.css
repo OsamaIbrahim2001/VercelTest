@@ -1,0 +1,11 @@
+.footer{
+  width: calc(40%);
+  margin: 0 auto;
+}
+.items{
+  color: white;
+}
+li{
+  float: right;
+  margin: 0 50px;
+}

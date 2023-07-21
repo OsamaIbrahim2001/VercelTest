@@ -1,0 +1,123 @@
+*{
+ font-weight: 600;
+  /* opacity: 100%; */
+}
+.navBarSearch{
+  display: inline;
+  color: white;
+  text-align: center;
+}
+
+.navBarSearch1{
+  color: white;
+  left: 1%;
+  position: absolute;
+  display: flex;
+}
+.first{
+  margin-left: 50px;
+}
+ul{
+  float: left;
+  display: inline;
+  width: 100%;
+}
+a{
+  list-style: none;
+  float: right;
+  text-align: center;
+  padding-right: 20px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.text-warning{
+  color: #D8832C !important;
+}
+.btn-outline-warning{
+  color: #D8832C !important;
+border-color: #D8832C !important;
+}
+
+.btn-outline-warning:hover{
+  background-color: #D8832C !important;
+  color: white !important;
+border-color: #D8832C !important;
+}
+nav{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.chat{
+position: absolute;
+top: 33px;
+left: 200px;
+height: 150px;
+width: 300px;
+background-color: #E2E2E2;
+  z-index: 12032;
+}
+
+
+*[_ngcontent-ng-c1114982685] {
+  font-size: 23px !important;
+}
+i{
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+.navbar-toggler{
+  display: flex;
+}
+.navBarSearch1{
+  display: none;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+@media only screen and (min-width: 600px) {
+  .navbar-toggler{
+    display: none;
+  }
+  .navBarSearch1{
+    display: flex;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .navbar-toggler{
+    display: none;
+  }
+  .navBarSearch1{
+    display: flex;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar-toggler{
+    display: none;
+  }
+  .navBarSearch1{
+    display: flex;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar-toggler{
+    display: none;
+  }
+}
+
+.toggile-NavMob{
+  color: white;
+}

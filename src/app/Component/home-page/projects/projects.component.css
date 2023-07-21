@@ -1,0 +1,46 @@
+.container{
+  background-color: black;
+  color: #FFBB00;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.card{
+  border: none;
+}
+.card-body{
+  border-left: #FFBB00 solid 1px;
+  border-right: #FFBB00 solid 1px;
+  border-bottom: #FFBB00 solid 1px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .card{width: 100%;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card{
+    width: calc(32.333%);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
+.btnNumber{
+  color: #131313;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 12px;
+}

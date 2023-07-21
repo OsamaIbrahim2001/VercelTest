@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark bg-dark" style="position: relative;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/Images/logoy.svg" alt="" style="transform: scale(2.5);" width="60" height="48" class="d-inline-block align-text-top">
+      <span style="margin-right: 30px;">لؤلؤة الشرق</span>
+    </a>
+
+    <div class="navBarSearch1 container-fluid toggile-NavLab" dir="ltr">
+      <a (click)="scrollTo('contact')">تواصل معنا</a>
+      <a (click)="scrollTo('equipment')">المعدات</a>
+      <a (click)="scrollTo('works')">اعمالنا</a>
+      <a (click)="scrollTo('about')">عنا</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" (click)="toggileMob()" aria-label="Toggle navigation">
+      <div class="navbar-toggler-icon"></div>
+      <br>
+      <div class="toggile-NavMob"*ngIf="showMob">
+      <a (click)="scrollTo('contact')">تواصل معنا</a>
+      <br>
+      <a (click)="scrollTo('equipment')">المعدات</a>
+      <br>
+      <a (click)="scrollTo('works')">اعمالنا</a>
+      <br>
+      <a (click)="scrollTo('about')">عنا</a>
+    </div>
+    </button>
+
+
+
+  </div>
+
+</nav>
+
+
+<router-outlet></router-outlet>
+
