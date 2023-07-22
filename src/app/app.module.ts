@@ -11,14 +11,12 @@ import { HomePageComponent } from './Component/home-page/home-page.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 import { FormsModule } from '@angular/forms';
-import {AngularFireModule} from '@angular/fire/compat';
 
 
 
@@ -31,11 +29,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideMessaging,getMessaging } from '@angular/fire/messaging';
+
 import { ToastrModule } from 'ngx-toastr';
 import { DatetimeFormatPipe } from './Pipes/datetime-format.pipe';
 import { SliderComponent } from './Component/home-page/slider/slider.component';
@@ -73,13 +67,7 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatIconModule,
     BrowserAnimationsModule,
-    NgxPaginationModule,
     CommonModule,
-    ToastrModule.forRoot({
-        timeOut: 10000,
-        positionClass: 'toast-top-full-width',
-        preventDuplicates: true,
-      }),
      // ToastrModule added
     MatAutocompleteModule,
     MatFormFieldModule,
@@ -92,7 +80,6 @@ import { FooterComponent } from './footer/footer.component';
     MatPaginatorModule,
     MatTableModule,
     MatCardModule,
-    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent],
