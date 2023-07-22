@@ -1,47 +1,79 @@
-<!-- <nav class="navbar navbar-dark bg-dark" style="position: relative;">
+<!-- <nav class="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="../assets/Images/logoy.svg" alt="" style="transform: scale(2.5);" width="60" height="48" class="d-inline-block align-text-top">
-      <span style="margin-right: 30px;">لؤلؤة الشرق</span>
+      <img src="../assets/Images/logoy.svg" alt="" width="60" height="48" class="d-inline-block align-text-top">
+      <span>لؤلؤة الشرق</span>
     </a>
 
-    <div class="navBarSearch1 container-fluid toggile-NavLab" dir="ltr">
-      <a (click)="scrollTo('contact')">تواصل معنا</a>
-      <a (click)="scrollTo('equipment')">المعدات</a>
-      <a (click)="scrollTo('works')">اعمالنا</a>
-      <a (click)="scrollTo('about')">عنا</a>
+    <div class="navBarSearch1 toggile-NavLab">
+      <a onclick="scrollTo('contact')">تواصل معنا</a>
+      <a onclick="scrollTo('equipment')">المعدات</a>
+      <a onclick="scrollTo('works')">اعمالنا</a>
+      <a onclick="scrollTo('about')">عنا</a>
     </div>
 
-    <button class="navbar-toggler" type="button" (click)="toggileMob()" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" onclick="toggileMob()" aria-label="Toggle navigation">
       <div class="navbar-toggler-icon"></div>
-      <br>
-      <div class="toggile-NavMob"*ngIf="showMob">
-      <a (click)="scrollTo('contact')">تواصل معنا</a>
-      <br>
-      <a (click)="scrollTo('equipment')">المعدات</a>
-      <br>
-      <a (click)="scrollTo('works')">اعمالنا</a>
-      <br>
-      <a (click)="scrollTo('about')">عنا</a>
-    </div>
+      <div class="toggile-NavMob" id="showMob">
+        <a onclick="scrollTo('contact')">تواصل معنا</a>
+        <a onclick="scrollTo('equipment')">المعدات</a>
+        <a onclick="scrollTo('works')">اعمالنا</a>
+        <a onclick="scrollTo('about')">عنا</a>
+      </div>
     </button>
-
-
-
   </div>
-
 </nav> -->
 
-<nav class="c-nav">
+<!-- <nav class="c-nav" style="background-color: aquamarine !important;">
   <div class="container">
-    <a href="" class="brand">
-      <img src="../assets/Images/logoy.svg" alt="">
+    <div class="brand" style="float: right; display: flex; overflow: hidden;">
+      <a href="" class="brand-image">
+        <img src="../assets/Images/logoy.svg" alt="">
+      </a>
+      <a href="" class="brand-text">
+        <span>لؤلؤة الشروق</span>
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <ul>
+        <li>Osama</li>
+        <li>Osama</li>
+      </ul>
+    </div>
+
+  </div>
+</nav> -->
+
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/Images/logoy.svg" alt="" width="60" height="48" class="logo">
+      <span class="brand-name">لؤلؤة الشرق</span>
     </a>
-    <a href="" class="brand-text">
-      <span>لؤلؤة الشروق</span>
-    </a>
+
+    <div class="navbar-menu navLab">
+      <a (click)="scrollTo('contact')">تواصل معنا</a>
+      <a (click)="scrollTo('equipment')">المعدات</a>
+      <a (click)="scrollTo('works')">اعمالنا</a>
+      <a (click)="scrollTo('about')">عنا</a>
+    </div>
+
+    <div class="navbar-menu active navMob" *ngIf="showMenu">
+      <a (click)="scrollTo('contact')">تواصل معنا</a>
+      <a (click)="scrollTo('equipment')">المعدات</a>
+      <a (click)="scrollTo('works')">اعمالنا</a>
+      <a (click)="scrollTo('about')">عنا</a>
+    </div>
+
+    <button class="navbar-toggler" (click)="toggleMenu()">
+      <div class="menu-icon"></div>
+    </button>
   </div>
 </nav>
 
-<router-outlet></router-outlet>
 
+
+
+
+<router-outlet></router-outlet>

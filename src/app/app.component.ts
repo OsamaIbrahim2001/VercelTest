@@ -32,6 +32,18 @@ toggileMob(){
 this.showMob=!this.showMob;
 }
 
+showMenu = false;
+
+toggleMenu() {
+  this.showMenu = !this.showMenu;
+}
+
+// scrollTo(section: string) {
+//   // Implement your scrolling logic here
+// }
+
+
+
 }
 
 

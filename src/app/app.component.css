@@ -2,6 +2,7 @@
  font-weight: 600;
   /* opacity: 100%; */
 }
+/*
 .navBarSearch{
   display: inline;
   color: white;
@@ -68,8 +69,10 @@ background-color: #E2E2E2;
 }
 i{
   font-size: 25px;
-}
+} */
 
+
+/*
 @media only screen and (max-width: 600px) {
 .navbar-toggler{
   display: flex;
@@ -79,7 +82,6 @@ i{
 }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 
 
 @media only screen and (min-width: 600px) {
@@ -91,7 +93,6 @@ i{
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .navbar-toggler{
     display: none;
@@ -101,7 +102,6 @@ i{
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .navbar-toggler{
     display: none;
@@ -111,7 +111,6 @@ i{
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .navbar-toggler{
     display: none;
@@ -134,10 +133,10 @@ i{
   width: calc(90%);
   margin: auto;
 }
-.brand,.brand-text{
+.brand-image,.brand-text{
   text-decoration: none;
 }
-.brand img{
+.brand-image img{
   width: 50px;
   height: 50px;
   transform: scale(1.8);
@@ -145,3 +144,161 @@ i{
 .brand-text{
 margin: 10px 0;
 }
+
+.nav-item{
+  overflow: hidden;
+  background-color: red;
+  float: left;
+  color: #E2E2E2;
+}
+
+ul{
+  color: white;
+  background-color: #D8832C;
+}
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Navbar styles */
+.navbar {
+  background-color: #343a40;
+  padding: 10px 0;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.logo {
+  transform: scale(2.5);
+  width: 60px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  margin-right: 30px;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+/* Mobile menu styles */
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin-bottom: 6px;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #343a40;
+}
+
+.active a {
+  margin: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .navbar-toggler{
+    display: flex;
+  }
+  .navLab{
+    display: none;
+  }
+  .logo {
+    transform: scale(1.8);
+    width: 50px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+  .brand-name {
+    margin-right: 10px;
+    font-size: 19px;
+  }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .navbar-toggler,.navMob{
+      display: none;
+    }
+    .navLab{
+      display: flex;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .navbar-toggler,.navMob{
+      display: none;
+    }
+    .navLab{
+      display: flex;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .navbar-toggler,.navMob{
+      display: none;
+    }
+    .navLab{
+      display: flex;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .navbar-toggler,.navMob{
+      display: none;
+    }
+    .navLab{
+      display: flex;
+    }
+  }
