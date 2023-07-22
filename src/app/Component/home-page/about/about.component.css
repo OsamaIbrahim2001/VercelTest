@@ -1,10 +1,79 @@
-.container{
-  background-color: black;
-  color: #FFBB00;
-  width: 90%;
-  margin: 30px auto;
+/* about-section.component.css */
+
+/* Global styles for the about section */
+.container {
+  text-align: center;
+  padding: 20px;
 }
-.name{
-  color: white;
+
+.h1 {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+/* Styles for the horizontal scroll */
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Styles for the construction items */
+.item {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+  width: 300px; /* Adjust the item width as per your content */
+}
+
+.item .row {
+  display: flex;
+}
+
+.item .text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.item .name {
+  font-size: 24px;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item .description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.item .image {
+  flex: 0 0 120px; /* Adjust the image width as per your content */
+  text-align: center;
+}
+
+.item .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 767px) {
+  .scroll-container {
+    overflow-x: visible;
+    white-space: normal;
+  }
+
+  .item {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .item .row {
+    flex-direction: column;
+  }
+
+  .item .text,
+  .item .image {
+    flex: 1;
+  }
 }
