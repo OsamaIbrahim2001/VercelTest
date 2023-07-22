@@ -1,6 +1,7 @@
 *{
  font-weight: 600;
   /* opacity: 100%; */
+  background-color: black;
 }
 .navBarSearch{
   display: inline;
