@@ -1,9 +1,19 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+  styleUrls: ['./slider.component.css'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('500ms ease-in-out', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [animate('500ms ease-in-out', style({ opacity: 0 }))]),
+    ]),
+  ],
 })
 export class SliderComponent implements OnInit {
   slides = [
@@ -19,6 +29,14 @@ export class SliderComponent implements OnInit {
 
   ngOnInit() {
     this.selectedImage=this.slides[this.currentSlideIndex].image;
+    this.startImageSlider();
+  }
+
+
+  startImageSlider() {
+    setInterval(() => {
+      this.nextSlide();
+    }, 2000);
   }
 
   showSlide(index: number) {
@@ -26,18 +44,6 @@ export class SliderComponent implements OnInit {
     // this.hideAllSlides();
   }
 
-  hideAllSlides() {
-    const slides = document.querySelectorAll('.carousel-item');
-    for (let i = 0; i < slides.length; i++) {
-      const slide = slides[i] as HTMLElement;
-      slide.style.opacity = '0';
-      slide.style.visibility = 'hidden';
-    }
-
-    const activeSlide = slides[this.currentSlideIndex] as HTMLElement;
-    activeSlide.style.opacity = '1';
-    activeSlide.style.visibility = 'visible';
-  }
 
 
   nextSlide() {

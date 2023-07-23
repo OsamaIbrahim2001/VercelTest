@@ -54,6 +54,18 @@
   height: 20px;
   transform: scale(1.2);
 }
+.text-centerPhone{
+  text-align: center;
+}
+.contactBtn{
+  color: white;
+  padding: 10px 20px;
+  border: solid 2px #ffbb00;
+  font-size: 24px;
+  font-weight: bold;
+  /* display: inline-block; */
+}
+
 @media only screen and (max-width: 600px) {
   .phoneText{
     margin-left: 10px;
@@ -74,19 +86,35 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .card {
-    width: calc(48%);
+  .phoneText{
+    margin-left: 20px;
+     color: white; font-size: 18px;
   }
+  .phone img{
+    width: 20px;
+    height: 20px;
+    transform: scale(1.2);
+}
 }
 
 @media only screen and (min-width: 992px) {
-  .card {
-    width: calc(32.333%);
+  .phoneText{
+    margin-left: 20px;
+     color: white; font-size: 18px;
   }
+  .phone img{
+    width: 20px;
+    height: 20px;
+    transform: scale(1.2);}
 }
 
 @media only screen and (min-width: 1200px) {
-  .card {
-    width: calc(32.333%);
+  .phoneText{
+    margin-left: 20px;
+     color: white; font-size: 18px;
   }
+  .phone img{
+    width: 20px;
+    height: 20px;
+    transform: scale(1.2);}
 }

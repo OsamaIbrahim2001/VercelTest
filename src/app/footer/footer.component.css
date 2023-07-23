@@ -1,11 +1,41 @@
-.footer{
-  width: calc(40%);
+.footerW {
+  /* background-color: #333; */
+  color: white;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.footer {
+  max-width: 1200px;
   margin: 0 auto;
 }
-.items{
-  color: white;
+
+.d-flex {
+  display: flex;
 }
-li{
-  float: right;
-  margin: 0 50px;
+
+.justify-content-between {
+  justify-content: space-evenly;
+}
+
+.items div {
+  padding: 5px 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.col-1 {
+  flex: 0 0 8.3333%;
+  max-width: 8.3333%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-light {
+  color: white;
 }
