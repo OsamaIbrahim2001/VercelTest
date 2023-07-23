@@ -1,46 +1,81 @@
-.equipment{
-height: 300px;
-width: 400px;
-}
-.equipment-item{
-border: #FFBB00 solid 1px;
-overflow: hidden;
-width: 100%;
-height: 100%;
-}
-.container{
-  background-color: black;
-  color: #FFBB00;
+.h2 {
+  color: #FFFFFF;
+  font-size: 26px;
+  font-weight: bolder;
   width: 90%;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
-/* Extra small devices (phones, 600px and down) */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffbb00;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card {
+  border: 1px solid #ffbb00;
+  border-radius: 5px;
+  display: grid;
+  width: calc(31.3333%);
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 1%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+}
+
+.card-body {
+  padding: 15px;
+  border: 1px solid orange;
+  background-color: black;
+}
+
+.card-title {
+  color: #FFFFFF;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
 @media only screen and (max-width: 600px) {
-  .equipment-item{width: 100%;}
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .equipment-item{
-    width: calc(32.333%);
+  .card {
+    width: calc(98%);
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
-hr{
-  width: 50%; margin: 0 auto; border: 1px solid orange;
+@media only screen and (min-width: 600px) {
+  .card {
+    width: calc(48%);
+  }
 }
 
+@media only screen and (min-width: 768px) {
+  .card {
+    width: calc(48%);
+  }
+}
 
-.btnNumber{
+@media only screen and (min-width: 992px) {
+  .card {
+    width: calc(31.333%);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: calc(31.333%);
+  }
+}
+
+.btnNumber {
   color: #131313;
   border: none;
   background-color: white;
@@ -48,4 +83,24 @@ hr{
   font-weight: bold;
   text-align: center;
   padding: 5px 12px;
+  border-radius: 50%;
+}
+
+.btnPrev,.btnNext {
+  border-radius: 6px;
+  background-color: #ffbb00;
+  border: none;
+  height: 30px;
+  padding-top: 5px;
+  width: 30px;
+}
+.btnPrev{
+    margin-left: 10px;
+}
+.btnNext {
+  margin-right: 10px;
+}
+
+.disabled {
+  opacity: 50%;
 }

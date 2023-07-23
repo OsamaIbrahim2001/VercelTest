@@ -1,30 +1,30 @@
-
+<br>
+<div class="h2">المعدات</div>
+<br>
 <div class="container">
-  <div class="h1" style="font-weight: bolder;">المعدات</div>
-  <br>
-  <div class="card mb-3 me-2" style=" display: inline-flex; border-color: orange;">
-      <img class="card-img-top"   height="200px" src="../../../../assets/Images/2.jpg" alt="Card image cap">
-    <div class="card-body" style="background-color: black; border-top: 1px solid orange;">
-      <div class="h3 text-light text-center">لودر</div>
-      </div>
+<div class="card" *ngFor="let item of projects">
+  <img class="card-img-top" (mouseleave)="resetImage(0)" (mouseover)="changeImage(0)" src="../../../../assets/Images/1.jpg" alt="Card image cap">
+
+  <div class="card-body">
+    <div class="card-title">{{ item.title }}</div>
   </div>
 </div>
-<div class="mt-8 py-5 flex justify-content items-center" style="text-align: center;">
-  <div>
-    <button class="btn btn-dark" (click)="previousPage()" style="color: orange; margin-left: 10px; font-weight: bold;"
-      [class.disabled]="pageNumber===1">
-      <i class="fa fa-forward"></i></button>
-
-    <button class="btnNumber rounded-pill" (click)="setPage(index)" *ngFor="let index of buttonArray"
-      [style.color]="index === pageNumber ? 'white' : 'orange'"
-      [style.background-color]="index === pageNumber ? '#d8832c' : 'initial'">{{index}}</button>
-
-    <button class="btn btn-dark" (click)="nextPage()" style="color: orange; margin-right: 10px; font-weight: bold;"
-      [disabled]="pageNumber * pageSize >= totalCount">
-      <i class="fa fa-backward"></i></button>
-
-  </div>
-
 </div>
 <br>
-<hr>
+  <div class="mt-8 py-5 flex justify-content items-center" style="text-align: center;">
+    <div>
+      <button class="btnPrev" (click)="previousPage()"
+      [class.disabled]="pageNumber === 1">
+      <img src="../../../../assets/Images/forward-solid.svg" width="100%" alt=""></button>
+
+      <button class="btnNumber" (click)="setPage(index)" *ngFor="let index of buttonArray"
+        [style.color]="index === pageNumber ? 'white' : '#ffbb00'"
+        [style.background-color]="index === pageNumber ? '#ffbb00' : 'initial'">{{index}}</button>
+
+      <button class="btnNext" (click)="nextPage()"
+        [class.disabled]="pageNumber * pageSize >= totalCount">
+        <img src="../../../../assets/Images/backward-solid.svg" width="100%" alt=""></button>
+    </div>
+
+  </div>
+<br>

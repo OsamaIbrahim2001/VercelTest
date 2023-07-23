@@ -1,31 +1,39 @@
-.header{
-  color: #ffbb00;
+.container {
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
-.contactBtn{
-  border: #ffbb00 solid 1px;
-  padding: 10px 30px;
+
+.text-center {
+  text-align: center;
+}
+
+.header {
   color: white;
 }
 
-hr{
-  border: #ffbb00 1px solid;
+.h2 {
+  color: orange;
+  font-size: 24px;
 }
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
+.col-8 {
+  flex: 0 0 66.66%;
+  max-width: 66.66%;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+.col-4 {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  text-align: end;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
