@@ -95,11 +95,15 @@ export class ProjectsComponent implements OnInit {
     this.pageNumber=pnumber;
   }
 
+  prevTouchID=-1;
   currentIndex:number=0;
   intervalId:any;
 
   changeImage(index:number) {
     this.currentIndex=1;
+    if(this.prevTouchID>=0){
+        this.projects[this.prevTouchID].coverImage=this.projects[this.prevTouchID].images[0];
+    }
     const images:string[]=this.projects[index].images;
     this.clearInterval();
    this.intervalId= setInterval(() => {
