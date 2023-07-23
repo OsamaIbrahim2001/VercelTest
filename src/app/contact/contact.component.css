@@ -44,3 +44,49 @@
   bottom: 0;
   left: 0;
 }
+
+.phoneText{
+  margin-left: 20px;
+   color: white; font-size: 18px;
+}
+.phone img{
+  width: 20px;
+  height: 20px;
+  transform: scale(1.2);
+}
+@media only screen and (max-width: 600px) {
+  .phoneText{
+    margin-left: 10px;
+     color: white; font-size: 14px;
+  }
+  .phone img{
+    width: 15px;
+    height: 15px;
+    transform: scale(1.1);
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    width: calc(48%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    width: calc(48%);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    width: calc(32.333%);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: calc(32.333%);
+  }
+}
