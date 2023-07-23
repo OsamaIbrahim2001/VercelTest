@@ -17,19 +17,21 @@
   </div>
 </div>
 </div>
+<br>
   <div class="mt-8 py-5 flex justify-content items-center" style="text-align: center;">
     <div>
-      <button class="btn btn-dark" (click)="previousPage()" style="color: orange; margin-left: 10px; font-weight: bold;"
-        [disabled]="pageNumber===1">
-        <i class="fa fa-forward"></i></button>
+      <button class="btnPrev" (click)="previousPage()"
+      [class.disabled]="pageNumber === 1">
+      <img src="../../../../assets/Images/forward-solid.svg" width="100%" alt=""></button>
 
-      <button class="btnNumber rounded-pill" (click)="setPage(index)" *ngFor="let index of buttonArray"
-        [style.color]="index === pageNumber ? 'white' : 'orange'"
-        [style.background-color]="index === pageNumber ? '#d8832c' : 'initial'">{{index}}</button>
+      <button class="btnNumber" (click)="setPage(index)" *ngFor="let index of buttonArray"
+        [style.color]="index === pageNumber ? 'white' : '#ffbb00'"
+        [style.background-color]="index === pageNumber ? '#ffbb00' : 'initial'">{{index}}</button>
 
-      <button class="btn btn-dark" (click)="nextPage()" style="color: orange; margin-right: 10px; font-weight: bold;"
-        [disabled]="pageNumber * pageSize >= totalCount">
-        <i class="fa fa-backward"></i></button>
+      <button class="btnNext" (click)="nextPage()"
+        [class.disabled]="pageNumber * pageSize >= totalCount">
+        <img src="../../../../assets/Images/backward-solid.svg" width="100%" alt=""></button>
     </div>
 
   </div>
+<br>

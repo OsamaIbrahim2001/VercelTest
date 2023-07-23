@@ -1,9 +1,15 @@
-
+.h2 {
+  color: #FFFFFF;
+  font-size: 26px;
+  font-weight: bolder;
+  width: 90%;
+  margin: 0 auto;
+}
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  color: #FFBB00;
+  color: #ffbb00;
   width: 90%;
   margin: 0 auto;
 }
@@ -41,49 +47,58 @@
   color: white;
 }
 
-.card-footer{
+.card-footer {
   position: relative;
   display: flex;
 }
-.card-body .text{
-  width:calc(85%);
+
+.card-body .text {
+  width: calc(85%);
 }
-.card-body .links{
+
+.card-body .links {
   position: absolute;
   width: calc(14%);
   left: 1%;
   bottom: 0;
 }
-.card-body .links img{
+
+.card-body .links img {
   width: calc(50%);
-transform: scale(2.5);
+  transform: scale(2.5);
 }
 
 @media only screen and (max-width: 600px) {
-  .card{width: calc(98%);}
+  .card {
+    width: calc(98%);
+  }
 }
 
 @media only screen and (min-width: 600px) {
-  .card{width: calc(48%);}
+  .card {
+    width: calc(48%);
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  .card{width: calc(48%);}
+  .card {
+    width: calc(48%);
+  }
 }
 
 @media only screen and (min-width: 992px) {
-  .card{
+  .card {
     width: calc(32.333%);
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .card{
+  .card {
     width: calc(32.333%);
   }
 }
 
-.btnNumber{
+.btnNumber {
   color: #131313;
   border: none;
   background-color: white;
@@ -92,4 +107,23 @@ transform: scale(2.5);
   text-align: center;
   padding: 5px 12px;
   border-radius: 50%;
+}
+
+.btnPrev,.btnNext {
+  border-radius: 6px;
+  background-color: #ffbb00;
+  border: none;
+  height: 30px;
+  padding-top: 5px;
+  width: 30px;
+}
+.btnPrev{
+    margin-left: 10px;
+}
+.btnNext {
+  margin-right: 10px;
+}
+
+.disabled {
+  opacity: 50%;
 }
