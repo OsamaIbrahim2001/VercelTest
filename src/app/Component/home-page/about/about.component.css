@@ -1,3 +1,11 @@
+.containers {
+  color: #FFBB00;
+  width: 90%;
+  margin: 0 auto;
+}
+.containers .header{
+  color: #ccc;
+}
 
 .container {
   color: #FFBB00;
@@ -52,19 +60,12 @@ height: 200px;
 .card-body .text{
   width:calc(85%);
 }
-.card-body .links{
-  position: absolute;
-  width: calc(14%);
-  left: 1%;
-  bottom: 0;
-}
-.card-body .links img{
-  width: calc(50%);
-transform: scale(2.5);
-}
+
 
 @media only screen and (max-width: 600px) {
-  .card{width: calc(98%);}
+  .card{width: calc(98%);
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 600px) {
