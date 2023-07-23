@@ -4,9 +4,15 @@
   margin: 0 auto;
 }
 .containers .header{
-  color: #ccc;
+  color: #FFBB00;
+  font-size: 28px;
+  font-weight: bolder;
 }
-
+.containers .description{
+  color: #FFBB00;
+  font-size: 17px;
+  font-weight: bold;
+}
 .container {
   color: #FFBB00;
   width: 90%;
@@ -44,27 +50,24 @@ height: 200px;
 }
 
 .card-title {
-  color: orange;
-  font-size: 21px;
-  font-weight: bold;
-}
-
-.card-text {
   color: white;
+  font-size: 24px;
+  font-weight: bolder;
 }
 
 .card-footer{
   position: relative;
   display: flex;
 }
-.card-body .text{
-  width:calc(85%);
+.card-body .card-text{
+color: #FFBB00;
+font-weight: bold;
+font-size: 18px;
 }
 
 
 @media only screen and (max-width: 600px) {
   .card{width: calc(98%);
-    flex-direction: column;
   }
 }
 
