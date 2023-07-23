@@ -104,6 +104,7 @@ export class ProjectsComponent implements OnInit {
     if(this.prevTouchID>=0){
         this.projects[this.prevTouchID].coverImage=this.projects[this.prevTouchID].images[0];
     }
+    this.prevTouchID=index;
     const images:string[]=this.projects[index].images;
     this.clearInterval();
    this.intervalId= setInterval(() => {
