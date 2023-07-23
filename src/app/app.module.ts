@@ -37,8 +37,9 @@ import { AboutComponent } from './Component/home-page/about/about.component';
 import { ProjectsComponent } from './Component/home-page/projects/projects.component';
 import { EquipmentsComponent } from './Component/home-page/equipments/equipments.component';
 import { EquipmentDetailsComponent } from './Component/home-page/equipments/equipment-details/equipment-details.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './Component/home-page/contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { CardComponent } from './Component/home-page/card/card.component';
 
 
 
@@ -57,6 +58,7 @@ import { FooterComponent } from './footer/footer.component';
     EquipmentDetailsComponent,
     ContactComponent,
     FooterComponent,
+    CardComponent
   ],
 
   imports: [

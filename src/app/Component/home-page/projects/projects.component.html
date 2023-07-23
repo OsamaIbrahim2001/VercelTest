@@ -2,23 +2,20 @@
 <div class="h2">مشاريعنا</div>
 <br>
 <div class="container">
-<div class="card" *ngFor="let item of projects let i=index">
-  <img class="card-img-top" (mouseleave)="resetImage(i)" (mouseover)="changeImage(i)"
-  [src]="item.coverImage"
-  alt="Card image cap" >
-
-  <div class="card-body">
-    <div class="card-title">{{ item.title }}</div>
-    <div class="card-footer">
-      <div class="text"><p class="card-text">{{ item.description }}</p></div>
-      <div class="links">
-        <img src="../../../../assets/Images/whats.png"  alt="">
-        <img src="../../../../assets/Images/face.png"  alt="">
+  <div class="card" *ngFor="let item of projects let i=index">
+    <div class="card-image" (mouseenter)="changeImage(i)" (mouseout)="resetImage(i)">
+      <img [src]="item.coverImage" alt="Card Image" >
+    </div>
+    <div class="card-body">
+      <div class="card-title">{{ item.title }}</div>
+      <p class="card-text">{{ item.description }}</p>
+      <div class="card-links">
+        <img src="../../../../assets/Images/whats.png" alt="">
+        <img src="../../../../assets/Images/face.png" alt="">
       </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
 <br>
   <div class="mt-8 py-5 flex justify-content items-center" style="text-align: center;">
     <div>
