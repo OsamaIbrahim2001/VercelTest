@@ -25,10 +25,10 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   display: flex;
-height: 200px;
+  height: 200px;
   overflow: hidden;
-  margin-bottom: 10px;
-  margin-left: .5%;
+  margin-bottom: 20px;
+  margin-left: 1%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,7 +43,6 @@ height: 200px;
 
 .card-body {
   padding: 15px;
-  border: 1px solid orange;
   background-color: black;
   color: white;
   flex: calc(60%);
