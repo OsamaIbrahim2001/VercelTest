@@ -36,8 +36,11 @@
   max-width: 33.33%;
   text-align: end;
 }
-
-img {
-  /* display: block; */
-  /* margin: auto; */
+.logo{
+  position: relative;
+}
+.phone{
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
