@@ -1,31 +1,26 @@
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.card-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
 .backImage{
   background-image: url('../../../../assets/Images/cover1.png');
 }
-
-.text-center {
-  text-align: center;
+.container {
+  color: #ffbb00;
+  width: 90%;
+  margin: 0 auto;
 }
-
 .header {
-  color: white;
-}
-
-.h2 {
+  text-align: center;
   color: orange;
   font-size: 24px;
+  font-weight: bold;
+}
+.contactBtn{
+  text-align: center;
+}
+.contactBtn span{
+  color: white;
+  padding: 10px 20px;
+  border: solid 2px #ffbb00;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .row {
@@ -33,95 +28,75 @@
   flex-wrap: wrap;
 }
 
-.col-8 {
-  flex: 0 0 66.66%;
-  max-width: 66.66%;
-}
-
-.col-4 {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-  text-align: end;
-}
-.logo{
-  position: relative;
-}
-.phone{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 .phoneText{
-  margin-left: 20px;
-   color: white; font-size: 18px;
-}
-.phone img{
-  width: 20px;
-  height: 20px;
-  transform: scale(1.2);
-}
-.text-centerPhone{
-  text-align: center;
-}
-.contactBtn{
-  color: white;
-  padding: 10px 20px;
-  border: solid 2px #ffbb00;
   font-size: 24px;
   font-weight: bold;
-  /* display: inline-block; */
+  color: white;
+  margin-left: 15px;
 }
 
 @media only screen and (max-width: 600px) {
-  .phoneText{
-    margin-left: 10px;
-     color: white; font-size: 14px;
+  .col-8 {
+    flex: 0 0 99.66%;
+    max-width: 66.66%;
   }
-  .phone img{
-    width: 15px;
-    height: 15px;
-    transform: scale(1.1);
+
+  .col-4 {
+    flex: 0 0 99.33%;
+    max-width: 99.33%;
+    text-align: center;
   }
 
 }
 
 @media only screen and (min-width: 600px) {
-  .card {
-    width: calc(48%);
+  .col-8 {
+    flex: 0 0 99.66%;
+    max-width: 66.66%;
+  }
+
+  .col-4 {
+    flex: 0 0 99.33%;
+    max-width: 99.33%;
+    text-align: center;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .phoneText{
-    margin-left: 20px;
-     color: white; font-size: 18px;
+  .col-8 {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
   }
-  .phone img{
-    width: 20px;
-    height: 20px;
-    transform: scale(1.2);
-}
+
+  .col-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: end;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-  .phoneText{
-    margin-left: 20px;
-     color: white; font-size: 18px;
+  .col-8 {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
   }
-  .phone img{
-    width: 20px;
-    height: 20px;
-    transform: scale(1.2);}
+
+  .col-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: end;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-  .phoneText{
-    margin-left: 20px;
-     color: white; font-size: 18px;
+  .col-8 {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
   }
-  .phone img{
-    width: 20px;
-    height: 20px;
-    transform: scale(1.2);}
+
+  .col-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: end;
+  }
 }
