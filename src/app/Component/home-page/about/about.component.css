@@ -66,28 +66,54 @@ font-size: 18px;
 
 
 @media only screen and (max-width: 600px) {
-  .card{width: calc(98%);
-  }
+  .card{width: calc(98%);}
+  .card-title{font-size: 16px;}
+  .card-text{font-size: 12px;}
 }
 
 @media only screen and (min-width: 600px) {
-  .card{width: calc(48%);}
+  .card{width: calc(98%);}
+  .card-title{font-size: 16px;}
+  .card-text{font-size: 12px;}
 }
 
 @media only screen and (min-width: 768px) {
   .card{width: calc(48%);}
+  .card-title{font-size: 16px;}
+  .card-text{font-size: 12px; overflow: hidden;}
+
 }
 
 @media only screen and (min-width: 992px) {
   .card{
     width: calc(48.333%);
   }
+    .card-body .card-text{
+    color: #FFBB00;
+    font-weight: bold;
+    font-size: 18px;
+    }
+    .card-title {
+      color: white;
+      font-size: 24px;
+      font-weight: bolder;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
   .card{
     width: calc(48.333%);
   }
+  .card-body .card-text{
+    color: #FFBB00;
+    font-weight: bold;
+    font-size: 18px;
+    }
+    .card-title {
+      color: white;
+      font-size: 24px;
+      font-weight: bolder;
+    }
 }
 
 .btnNumber{
