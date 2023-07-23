@@ -3,7 +3,7 @@
 <br>
 <div class="container">
   <div class="card" *ngFor="let item of projects let i=index">
-    <div class="card-image" (touchstart)="changeImage(i)" (touchend)="resetImage(i)" (mouseenter)="changeImage(i)" (mouseout)="resetImage(i)">
+    <div class="card-image" (touchstart)="changeImage(i)"  (mouseenter)="changeImage(i)" (mouseout)="resetImage(i)">
       <img [src]="item.coverImage" alt="Card Image" >
     </div>
     <div class="card-body">
