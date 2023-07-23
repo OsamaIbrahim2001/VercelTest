@@ -1,42 +1,57 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('500ms ease-in-out', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [animate('500ms ease-in-out', style({ opacity: 0 }))]),
+    ]),
+  ],
 })
 export class ProjectsComponent implements OnInit {
 
   projects = [
-    // {
-    //   id: 1,
-    //   title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
-    //   description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
-    // },
     {
       id: 1,
       title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
+      coverImage:'../../../../assets/Images/1.jpg',
       description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
+    images:['../../../../assets/Images/1.jpg','../../../../assets/Images/2.jpg','../../../../assets/Images/3.jpg','../../../../assets/Images/4.jpg','../../../../assets/Images/5.jpg']
     },
     {
       id: 1,
       title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
       description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
+      coverImage:'../../../../assets/Images/6.jpg',
+      images:['../../../../assets/Images/6.jpg','../../../../assets/Images/7.jpg','../../../../assets/Images/8.jpg','../../../../assets/Images/9.jpg','../../../../assets/Images/10.jpg']
     },
     {
       id: 1,
       title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
       description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
+      coverImage:'../../../../assets/Images/11.jpg',
+      images:['../../../../assets/Images/11.jpg','../../../../assets/Images/12.jpg','../../../../assets/Images/13.jpg','../../../../assets/Images/14.jpg','../../../../assets/Images/15.jpg']
     },
     {
       id: 1,
       title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
       description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
+      coverImage:'../../../../assets/Images/16.jpg',
+      images:['../../../../assets/Images/16.jpg','../../../../assets/Images/17.jpg','../../../../assets/Images/18.jpg','../../../../assets/Images/19.jpg','../../../../assets/Images/20.jpg']
     },
     {
       id: 1,
       title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
       description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
+      coverImage:'../../../../assets/Images/21.jpg',
+      images:['../../../../assets/Images/21.jpg','../../../../assets/Images/22.jpg','../../../../assets/Images/23.jpg','../../../../assets/Images/14.jpg','../../../../assets/Images/5.jpg']
     },
     // Add more projects as needed
   ];
@@ -55,17 +70,12 @@ export class ProjectsComponent implements OnInit {
   pageElement=0;
   buttonArray:number[]=[];
 
-  changeImage(sImage:number){
-    this.selectedImage=sImage;
-    console.log("Image ==>> ",this.selectedImage++);
-    console.log("Image ==>> ",this.selectedImage++);
-    console.log("Image ==>> ",this.selectedImage++);
-  }
+  originalImageSrc: string | undefined;
 
-  resetImage(num:number){
-    this.selectedImage=0;
-    console.log("Image ==>> ",this.selectedImage);
-    console.log("Image ==>> ",num);
+
+  resetImage(index:number) {
+    this.projects[index].coverImage=this.projects[index].images[0];
+    this.clearInterval();
   }
 
 
@@ -84,4 +94,30 @@ export class ProjectsComponent implements OnInit {
   setPage(pnumber:number){
     this.pageNumber=pnumber;
   }
+
+  currentIndex:number=0;
+  intervalId:any;
+
+  changeImage(index:number) {
+    this.currentIndex=1;
+    const images:string[]=this.projects[index].images;
+    this.clearInterval();
+   this.intervalId= setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % images.length;
+      this.projects[index].coverImage=images[this.currentIndex];
+    }, 2000);
+  }
+
+
+clearInterval(){
+  if(this.intervalId){
+    clearInterval(this.intervalId);
+  }
+}
+
+  // nextSlide() {
+  //   this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
+  //   this.selectedImage=this.slides[this.currentSlideIndex].image;
+  //   // this.showSlide(this.currentSlideIndex);
+  // }
 }
