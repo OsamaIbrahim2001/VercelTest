@@ -248,7 +248,7 @@ ul{
 
 
 @media only screen and (max-width: 600px) {
-  .navbar-toggler,.navMob{
+  .navbar-toggler{
     display: flex;
   }
   .navLab{
@@ -268,7 +268,7 @@ ul{
   }
 
   @media only screen and (min-width: 600px) {
-    .navbar-toggler,.navMob{
+    .navbar-toggler{
       display: none;
     }
     .navLab{
@@ -277,7 +277,7 @@ ul{
   }
 
   @media only screen and (min-width: 768px) {
-    .navbar-toggler,.navMob{
+    .navbar-toggler{
       display: none;
     }
     .navLab{
@@ -286,7 +286,7 @@ ul{
   }
 
   @media only screen and (min-width: 992px) {
-    .navbar-toggler,.navMob{
+    .navbar-toggler{
       display: none;
     }
     .navLab{
@@ -295,7 +295,7 @@ ul{
   }
 
   @media only screen and (min-width: 1200px) {
-    .navbar-toggler,.navMob{
+    .navbar-toggler{
       display: none;
     }
     .navLab{

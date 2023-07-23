@@ -1,110 +1,26 @@
+<br>
+<div class="h2">مشاريعنا</div>
+<br>
 <div class="container">
-  <div class="h1" style="color: orange; font-weight: bolder;">مشاريعنا</div>
-  <br>
-  <div class="card mb-3 me-2" style=" display: inline-flex;">
-    <!-- <a href="unit/det/{{unit.id}}"> -->
-      <img class="card-img-top" (mouseleave)="resetImage(1)" (mouseover)="changeImage(1)" height="200px" src="../../../../assets/Images/2.jpg" alt="Card image cap">
+<div class="card" *ngFor="let item of projects">
+  <img class="card-img-top" (mouseleave)="resetImage(0)" (mouseover)="changeImage(0)" src="../../../../assets/Images/1.jpg" alt="Card image cap">
 
-    <!-- </a> -->
-
-    <div class="card-body" style="background-color: black;">
-      <div style="color: orange; font-size: 21px;">تطوير مركز فيرجينيا جامعة الاسكندرية</div>
-      <p style="color: white;">تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية</p>
-    <div>
-      <i class="fa fa-facebook" style="color: orange;"></i>
-      <i class="fa fa-whatsapp" style="color: orange;"></i>
+  <div class="card-body">
+    <div class="card-title">{{ item.title }}</div>
+    <div class="card-footer">
+      <div class="text"><p class="card-text">{{ item.description }}</p></div>
+      <div class="links">
+        <img src="../../../../assets/Images/whats.png"  alt="">
+        <img src="../../../../assets/Images/face.png"  alt="">
+      </div>
     </div>
-    </div>
-
-
   </div>
-  <div class="card mb-3 me-2 " style=" display: inline-flex;">
-    <!-- <a href="unit/det/{{unit.id}}"> -->
-      <img class="card-img-top" (mouseleave)="resetImage(1)" (mouseover)="changeImage(1)" height="200px" src="../../../../assets/Images/2.jpg" alt="Card image cap">
-
-    <!-- </a> -->
-
-    <div class="card-body" style="background-color: black;">
-      <div style="color: orange; font-size: 21px;">تطوير مركز فيرجينيا جامعة الاسكندرية</div>
-      <p style="color: white;">تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية</p>
-    <div>
-      <i class="fa fa-facebook" style="color: orange;"></i>
-      <i class="fa fa-whatsapp" style="color: orange;"></i>
-    </div>
-    </div>
-
-
-  </div>
-  <div class="card mb-3 me-2" style=" display: inline-flex;">
-    <!-- <a href="unit/det/{{unit.id}}"> -->
-      <img class="card-img-top" (mouseleave)="resetImage(1)" (mouseover)="changeImage(1)" height="200px" src="../../../../assets/Images/2.jpg" alt="Card image cap">
-
-    <!-- </a> -->
-
-    <div class="card-body" style="background-color: black;">
-      <div style="color: orange; font-size: 21px;">تطوير مركز فيرجينيا جامعة الاسكندرية</div>
-      <p style="color: white;">تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية</p>
-    <div>
-      <i class="fa fa-facebook" style="color: orange;"></i>
-      <i class="fa fa-whatsapp" style="color: orange;"></i>
-    </div>
-    </div>
-
-
-  </div>  <div class="card mb-3 me-2 col-4" style=" display: inline-flex;">
-    <!-- <a href="unit/det/{{unit.id}}"> -->
-      <img class="card-img-top" (mouseleave)="resetImage(1)" (mouseover)="changeImage(1)" height="200px" src="../../../../assets/Images/2.jpg" alt="Card image cap">
-
-    <!-- </a> -->
-
-    <div class="card-body" style="background-color: black;">
-      <div style="color: orange; font-size: 21px;">تطوير مركز فيرجينيا جامعة الاسكندرية</div>
-      <p style="color: white;">تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية</p>
-    <div>
-      <i class="fa fa-facebook" style="color: orange;"></i>
-      <i class="fa fa-whatsapp" style="color: orange;"></i>
-    </div>
-    </div>
-
-
-  </div>  <div class="card mb-3 me-2 col-4" style=" display: inline-flex;">
-    <!-- <a href="unit/det/{{unit.id}}"> -->
-      <img class="card-img-top" (mouseleave)="resetImage(1)" (mouseover)="changeImage(1)" height="200px" src="../../../../assets/Images/2.jpg" alt="Card image cap">
-
-    <!-- </a> -->
-
-    <div class="card-body" style="background-color: black;">
-      <div style="color: orange; font-size: 21px;">تطوير مركز فيرجينيا جامعة الاسكندرية</div>
-      <p style="color: white;">تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية</p>
-    <div>
-      <i class="fa fa-facebook" style="color: orange;"></i>
-      <i class="fa fa-whatsapp" style="color: orange;"></i>
-    </div>
-    </div>
-
-
-  </div>  <div class="card mb-3 me-2 col-4" style=" display: inline-flex;">
-    <!-- <a href="unit/det/{{unit.id}}"> -->
-      <img class="card-img-top" (mouseleave)="resetImage(1)" (mouseover)="changeImage(1)" height="200px" src="../../../../assets/Images/2.jpg" alt="Card image cap">
-
-    <!-- </a> -->
-
-    <div class="card-body" style="background-color: black;">
-      <div style="color: orange; font-size: 21px;">تطوير مركز فيرجينيا جامعة الاسكندرية</div>
-      <p style="color: white;">تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية</p>
-    <div>
-      <i class="fa fa-facebook" style="color: orange;"></i>
-      <i class="fa fa-whatsapp" style="color: orange;"></i>
-    </div>
-    </div>
-
-
-  </div>
+</div>
 </div>
   <div class="mt-8 py-5 flex justify-content items-center" style="text-align: center;">
     <div>
       <button class="btn btn-dark" (click)="previousPage()" style="color: orange; margin-left: 10px; font-weight: bold;"
-        [class.disabled]="pageNumber===1">
+        [disabled]="pageNumber===1">
         <i class="fa fa-forward"></i></button>
 
       <button class="btnNumber rounded-pill" (click)="setPage(index)" *ngFor="let index of buttonArray"
@@ -114,7 +30,6 @@
       <button class="btn btn-dark" (click)="nextPage()" style="color: orange; margin-right: 10px; font-weight: bold;"
         [disabled]="pageNumber * pageSize >= totalCount">
         <i class="fa fa-backward"></i></button>
-
     </div>
 
   </div>

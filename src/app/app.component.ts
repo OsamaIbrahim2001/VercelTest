@@ -36,6 +36,8 @@ showMenu = false;
 
 toggleMenu() {
   this.showMenu = !this.showMenu;
+  console.log("ShowMenu=====", this.showMenu);
+
 }
 
 // scrollTo(section: string) {

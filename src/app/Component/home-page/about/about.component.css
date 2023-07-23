@@ -1,79 +1,100 @@
-/* about-section.component.css */
 
-/* Global styles for the about section */
 .container {
-  text-align: center;
-  padding: 20px;
+  color: #FFBB00;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.h1 {
-  font-size: 28px;
-  font-weight: bolder;
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: grid;
+height: 300px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-left: .5%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles for the horizontal scroll */
-.scroll-container {
-  overflow-x: auto;
-  white-space: nowrap;
+.card-img-top {
+  width: calc(33.333%);
+  height: 100%;
+  /* display: inline; */
+}
+.card-img-top img{
+  width: 100%;
 }
 
-/* Styles for the construction items */
-.item {
-  display: inline-block;
-  margin-right: 20px;
-  vertical-align: top;
-  width: 300px; /* Adjust the item width as per your content */
+.card-body {
+  padding: 15px;
+  border: 1px solid orange;
+  background-color: black;
+  color: white;
+  /* display: inline; */
+  width: calc(50%);
 }
 
-.item .row {
+.card-title {
+  color: orange;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.card-text {
+  color: white;
+}
+
+.card-footer{
+  position: relative;
   display: flex;
 }
-
-.item .text {
-  flex: 1;
-  padding-right: 20px;
+.card-body .text{
+  width:calc(85%);
+}
+.card-body .links{
+  position: absolute;
+  width: calc(14%);
+  left: 1%;
+  bottom: 0;
+}
+.card-body .links img{
+  width: calc(50%);
+transform: scale(2.5);
 }
 
-.item .name {
-  font-size: 24px;
+@media only screen and (max-width: 600px) {
+  .card{width: calc(98%);}
+}
+
+@media only screen and (min-width: 600px) {
+  .card{width: calc(48%);}
+}
+
+@media only screen and (min-width: 768px) {
+  .card{width: calc(48%);}
+}
+
+@media only screen and (min-width: 992px) {
+  .card{
+    width: calc(48.333%);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card{
+    width: calc(48.333%);
+  }
+}
+
+.btnNumber{
+  color: #131313;
+  border: none;
+  background-color: white;
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.item .description {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.item .image {
-  flex: 0 0 120px; /* Adjust the image width as per your content */
   text-align: center;
-}
-
-.item .image img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Media query for responsiveness */
-@media (max-width: 767px) {
-  .scroll-container {
-    overflow-x: visible;
-    white-space: normal;
-  }
-
-  .item {
-    width: auto;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .item .row {
-    flex-direction: column;
-  }
-
-  .item .text,
-  .item .image {
-    flex: 1;
-  }
+  padding: 5px 12px;
+  border-radius: 50%;
 }
