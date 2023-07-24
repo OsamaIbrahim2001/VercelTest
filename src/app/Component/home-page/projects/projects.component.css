@@ -19,7 +19,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-left: .5%;
   height: 550px; /* Set the fixed height for the card */
 }
@@ -75,12 +75,65 @@
 @media only screen and (max-width: 600px) {
   .card {
     width: calc(48%);
+    height: 300px;
+    margin-left: 1.5%;
   }
+  .card-image {
+    height: 55%; /* Set 60% of the card height for the image */
+    overflow: hidden;
+  }
+  .card-body {
+    padding-right: 5px;
+    height: 45%; /* Set 40% of the card height for the body */
+    display: block;
+    flex-direction: column;
+    background-color: #000;
+    position: relative;
+    border-top: #ffbb00 solid 1px;
+  }
+  .card-title {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    max-lines: 1;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Prevent wrapping to new lines */
+    overflow: hidden; /* Hide overflowing text */
+    /* margin-bottom: 8px; */
+  }
+  .card-text {
+    flex-grow: 1;
+    /* line-break: 1px; */
+    /* text-overflow: clip; */
+    font-size: 12px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 17px;
+    /* white-space: ; */
+    /* lighting-color: #ffbb00; */
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: calc(100%);
+  }
+  .card-links {
+    /* display: flex; */
+    position: absolute;
+    bottom: 20%;
+    left: 1%;
+    justify-content: flex-end;
+    width: calc(0%);
+  }
+
 }
 
 @media only screen and (min-width: 600px) {
   .card {
     width: calc(48%);
+    height: 350px;
   }
 }
 
