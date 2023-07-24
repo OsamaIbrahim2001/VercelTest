@@ -210,8 +210,10 @@ ul{
   margin-right: 10px;
 }
 
-.brand-name {
-  margin-right: 30px;
+.brandName{
+  margin-right: 5px;
+  width: 100%;
+  height: 20px;
 }
 
 .navbar-menu {
@@ -286,6 +288,16 @@ ul{
     .navbar-menu a {
       font-size: .95rem;
     }
+    .brandName{
+      margin-right: 35px;
+      transform: scale(1.3);
+    }
+    .logo {
+      transform: scale(2);
+      width: 52px;
+      height: 32px;
+      margin-right: 8px;
+    }
   }
 
   @media only screen and (min-width: 768px) {
@@ -297,6 +309,20 @@ ul{
     }
     .navbar-menu a {
       font-size: 1rem;
+
+        font-family: 'Cairo', sans-serif;
+        font-weight: bolder;
+
+    }
+    .brandName{
+      margin-right: 40px;
+      transform: scale(1.4);
+    }
+    .logo {
+      transform: scale(2.2);
+      width: 54px;
+      height: 34px;
+      margin-right: 8px;
     }
   }
 
@@ -309,6 +335,16 @@ ul{
     }
     .navbar-menu a {
       font-size: 1.05rem;
+}
+    .brandName{
+      margin-right: 45px;
+      transform: scale(1.6);
+    }
+    .logo {
+      transform: scale(2.3);
+      width: 58px;
+      height: 38px;
+      margin-right: 8px;
     }
   }
 
@@ -321,5 +357,15 @@ ul{
     }
     .navbar-menu a {
       font-size: 1.2rem;
+    }
+    .brandName{
+      margin-right: 70px;
+      transform: scale(1.8);
+    }
+    .logo {
+      transform: scale(2.5);
+      width: 60px;
+      height: 40px;
+      margin-right: 10px;
     }
   }

@@ -5,8 +5,13 @@
 } */
 
 /* Use 'YourFontName' wherever you want to apply the custom font */
-* {
+/* * {
   font-family: 'Contrast';
+} */
+
+
+*{
+  font-family: 'Cairo', sans-serif;
 }
 
 .carousel-container {
@@ -94,12 +99,14 @@
   border-radius: 3%;
 }
 .cap .text p{
-  padding: 10px 20px;
-  color: #ffbb00;
-  font-size: large;
-  font-weight: bold;
+  padding: 0 20px 10px 20px;
+  color: white;
+  font-size: medium;
+  font-weight:600;
   justify-content: center;
   text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 
