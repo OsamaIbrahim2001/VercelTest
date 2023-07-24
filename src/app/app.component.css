@@ -232,29 +232,24 @@ ul{
 }
 
 .active {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   position: absolute;
   bottom: 100px;
-  left: 0;
-  width: 100%;
+  right: 50px;
+  width: 100px;
+  height: 100px;
   background-color: #343a40;
 }
-
+/*
 .active a {
   margin: 10px;
-}
+} */
 
 
 @media only screen and (max-width: 600px) {
-  .navbar-toggler{
-    display: block;
-  }
-  .navLab{
-    display: none;
-  }
   .logo {
-    transform: scale(1.8);
+    transform: scale(1.6);
     width: 50px;
     height: 30px;
     margin-right: 8px;
@@ -262,8 +257,12 @@ ul{
 
   .brand-name {
     margin-right: 10px;
-    font-size: 19px;
+    font-size: 18px;
   }
+  .navbar-menu a {
+    font-size: .9rem;
+  }
+
   }
 
   @media only screen and (min-width: 600px) {
