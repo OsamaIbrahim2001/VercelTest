@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 600px) {
   .card {
-    width: calc(98%);
+    width: calc(48%);
   }
 }
 
