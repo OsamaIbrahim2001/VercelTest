@@ -170,6 +170,16 @@ ul{
 
 
 
+ @font-face {
+  font-family: 'Contrast';
+  src: url('../assets/Fonts/GE-Contrast-Bold.ttf') format('truetype');
+  /* Add other font formats if necessary */
+}
+
+/* Use 'YourFontName' wherever you want to apply the custom font */
+* {
+  font-family: 'Contrast';
+}
 
 
 
@@ -215,6 +225,7 @@ ul{
   text-decoration: none;
   margin-left: 20px;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* Mobile menu styles */
@@ -272,6 +283,9 @@ ul{
     .navLab{
       display: flex;
     }
+    .navbar-menu a {
+      font-size: .95rem;
+    }
   }
 
   @media only screen and (min-width: 768px) {
@@ -280,6 +294,9 @@ ul{
     }
     .navLab{
       display: flex;
+    }
+    .navbar-menu a {
+      font-size: 1rem;
     }
   }
 
@@ -290,6 +307,9 @@ ul{
     .navLab{
       display: flex;
     }
+    .navbar-menu a {
+      font-size: 1.05rem;
+    }
   }
 
   @media only screen and (min-width: 1200px) {
@@ -298,5 +318,8 @@ ul{
     }
     .navLab{
       display: flex;
+    }
+    .navbar-menu a {
+      font-size: 1.2rem;
     }
   }

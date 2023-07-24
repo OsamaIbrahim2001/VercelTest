@@ -1,4 +1,14 @@
 /* Carousel styles */
+/* @font-face {
+  font-family: 'Contrast';
+  src: url('../../../../assets/Fonts/GE-Contrast-Bold.ttf') format('truetype');
+} */
+
+/* Use 'YourFontName' wherever you want to apply the custom font */
+* {
+  font-family: 'Contrast';
+}
+
 .carousel-container {
   position: relative;
   overflow: hidden;

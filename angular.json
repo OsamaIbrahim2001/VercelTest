@@ -23,7 +23,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/Fonts"
+              "src/Fonts",
+              {
+                "glob": "**/*",
+                "input": "src/assets/Fonts/",
+                "output": "/assets/Fonts/"
+              }
             ],
             "styles": [
               "src/custom-theme.scss",
@@ -89,7 +94,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/Fonts"
+              "src/Fonts",
+              {
+                "glob": "**/*",
+                "input": "src/assets/Fonts/",
+                "output": "/assets/Fonts/"
+              }
             ],
             "styles": [
               "src/styles.css"
