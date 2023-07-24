@@ -1,15 +1,19 @@
-<div class="container">
-<div class="card" *ngFor="let item of projects let i=index">
-  <div class="card-image" (mouseenter)="changeImage(i)" (mouseout)="resetImage(i)">
-    <img [src]="item.coverImage" alt="Card Image" >
-  </div>
-  <div class="card-body">
-    <div class="card-title">{{ item.title }}</div>
-    <p class="card-text">{{ item.description }}</p>
-    <div class="card-links">
-      <img src="../../../../assets/Images/whats.png" alt="">
-      <img src="../../../../assets/Images/face.png" alt="">
+<nav class="navbar" [ngClass]="{ 'responsive': isResponsiveMenuOpen }">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="../assets/Images/logoy.svg" alt="" width="60" height="48" class="d-inline-block align-text-top">
+      <span>لؤلؤة الشرق</span>
+    </a>
+
+    <div class="menu-links">
+      <a routerLink="/contact" (click)="toggleResponsiveMenu()">تواصل معنا</a>
+      <a routerLink="/equipment" (click)="toggleResponsiveMenu()">المعدات</a>
+      <a routerLink="/works" (click)="toggleResponsiveMenu()">اعمالنا</a>
+      <a routerLink="/about" (click)="toggleResponsiveMenu()">عنا</a>
     </div>
+
+    <button class="navbar-toggler" (click)="toggleResponsiveMenu()" aria-label="Toggle navigation">
+      <span class="toggler-icon"></span>
+    </button>
   </div>
-</div>
-</div>
+</nav>

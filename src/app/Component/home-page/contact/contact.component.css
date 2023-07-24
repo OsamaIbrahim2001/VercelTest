@@ -37,13 +37,13 @@
 
 @media only screen and (max-width: 600px) {
   .col-8 {
-    flex: 0 0 99.66%;
-    max-width: 66.66%;
+    /* flex: 0 0 99.66%; */
+    width: calc(80%);
   }
 
   .col-4 {
-    flex: 0 0 99.33%;
-    max-width: 99.33%;
+    /* flex: 0 0 99.33%; */
+    width:calc(80%);
     text-align: center;
   }
 
@@ -51,52 +51,52 @@
 
 @media only screen and (min-width: 600px) {
   .col-8 {
-    flex: 0 0 99.66%;
-    max-width: 66.66%;
+    /* flex: 0 0 99.66%; */
+    width: calc(80%);
   }
 
   .col-4 {
-    flex: 0 0 99.33%;
-    max-width: 99.33%;
+    /* flex: 0 0 99.33%; */
+    width: calc(80%);
     text-align: center;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .col-8 {
-    flex: 0 0 66.66%;
-    max-width: 66.66%;
+    /* flex: 0 0 66.66%; */
+    max-width: 64.66%;
   }
 
   .col-4 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    /* flex: 0 0 33.33%; */
+    max-width: 31.33%;
     text-align: end;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .col-8 {
-    flex: 0 0 66.66%;
-    max-width: 66.66%;
+    /* flex: 0 0 66.66%; */
+    max-width: 64.66%;
   }
 
   .col-4 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    /* flex: 0 0 33.33%; */
+    max-width: 31.33%;
     text-align: end;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .col-8 {
-    flex: 0 0 66.66%;
-    max-width: 66.66%;
+    /* flex: 0 0 66.66%; */
+    max-width: 64.66%;
   }
 
   .col-4 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    /* flex: 0 0 33.33%; */
+    max-width: 31.33%;
     text-align: end;
   }
 }

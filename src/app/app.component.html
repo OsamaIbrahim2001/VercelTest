@@ -59,21 +59,22 @@
       <a (click)="scrollTo('about')">عنا</a>
     </div>
 
-    <div class="navbar-menu active" *ngIf="showMenu">
-      <a (click)="scrollTo('contact')">تواصل معنا</a>
-      <a (click)="scrollTo('equipment')">المعدات</a>
-      <a (click)="scrollTo('works')">اعمالنا</a>
-      <a (click)="scrollTo('about')">عنا</a>
-    </div>
 
-    <button class="navbar-toggler" (click)="toggleMenu()">
-      <div class="menu-icon"></div>
+
+    <button class="navbar-toggler" (click)="toggleMenu()" style="position: relative;">
+      <img src="../assets/Images/menu.png" style="transform: scale(1.2);" height="20px" width="20px" alt="">
+      <div class="active" *ngIf="showMenu">
+        <a (click)="scrollTo('contact')">تواصل معنا</a>
+        <a (click)="scrollTo('equipment')">المعدات</a>
+        <a (click)="scrollTo('works')">اعمالنا</a>
+        <a (click)="scrollTo('about')">عنا</a>
+      </div>
     </button>
   </div>
 </nav>
 
 
-
+<!-- <app-card></app-card> -->
 
 
 <router-outlet></router-outlet>

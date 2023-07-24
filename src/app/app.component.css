@@ -177,7 +177,6 @@ ul{
 .navbar {
   background-color: #343a40;
   padding: 10px 0;
-  position: relative;
 }
 
 .container {
@@ -236,7 +235,7 @@ ul{
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 100%;
+  bottom: 100px;
   left: 0;
   width: 100%;
   background-color: #343a40;
@@ -249,7 +248,7 @@ ul{
 
 @media only screen and (max-width: 600px) {
   .navbar-toggler{
-    display: flex;
+    display: block;
   }
   .navLab{
     display: none;
