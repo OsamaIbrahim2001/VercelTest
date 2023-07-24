@@ -43,4 +43,24 @@ export class AboutComponent {
   },
 ]
 
+totalCount: number = 11;
+pageNumber: number = 1;
+pageSize: number = 4;
+pageElement=0;
+buttonArray:number[]=[];
+previousPage() {
+  if (this.pageNumber > 1) {
+    this.pageNumber--;
+  }
+}
+
+nextPage() {
+  if (this.pageNumber * this.pageSize < this.totalCount) {
+    this.pageNumber++;
+  }
+}
+
+setPage(pnumber:number){
+  this.pageNumber=pnumber;
+}
 }

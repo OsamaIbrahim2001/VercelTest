@@ -2,20 +2,27 @@
 /* @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.min.css"; */
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap');
-@import url("https://fonts.googleapis.com");
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap");
 
 /* Replace 'YourFontName' with the actual name of your font */
 @font-face {
   font-family: 'Monadi';
   src: url('assets/Fonts/Monadi.ttf') format('truetype');
-  /* Add other font formats if necessary */
+}
+@font-face {
+  font-family: 'Cairo';
+  /* src: url('assets/Fonts/static/Cairo-Bold.ttf') format('truetype'); */
+  /* src: url('assets/Fonts/static/Cairo-Black.ttf') format('truetype'); */
+  /* src: url('assets/Fonts/static/Cairo-ExtraBold.ttf') format('truetype'); */
+  src: url('assets/Fonts/CairoVar.ttf') format('truetype');
+   /* src: url('assets/Fonts/static/Cairo-Light.ttf') format('truetype'); */
+  /* src: url('assets/Fonts/static/Cairo-Medium.ttf') format('truetype');
+  src: url('assets/Fonts/static/Cairo-Regular.ttf') format('truetype');
+  src: url('assets/Fonts/static/Cairo-SemiBold.ttf') format('truetype'); */
 }
 
 /* Use 'YourFontName' wherever you want to apply the custom font */
 * {
-  font-family: 'Monadi';
+  font-family: 'Cairo';
 }
 
 

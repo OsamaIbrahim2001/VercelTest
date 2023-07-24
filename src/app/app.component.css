@@ -1,189 +1,4 @@
-*{
- font-weight: 600;
-  /* opacity: 100%; */
-}
-/*
-.navBarSearch{
-  display: inline;
-  color: white;
-  text-align: center;
-}
 
-.navBarSearch1{
-  color: white;
-  left: 1%;
-  position: absolute;
-  display: flex;
-}
-.first{
-  margin-left: 50px;
-}
-ul{
-  float: left;
-  display: inline;
-  width: 100%;
-}
-a{
-  list-style: none;
-  float: right;
-  text-align: center;
-  padding-right: 20px;
-}
-a{
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-.text-warning{
-  color: #D8832C !important;
-}
-.btn-outline-warning{
-  color: #D8832C !important;
-border-color: #D8832C !important;
-}
-
-.btn-outline-warning:hover{
-  background-color: #D8832C !important;
-  color: white !important;
-border-color: #D8832C !important;
-}
-nav{
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-}
-.chat{
-position: absolute;
-top: 33px;
-left: 200px;
-height: 150px;
-width: 300px;
-background-color: #E2E2E2;
-  z-index: 12032;
-}
-
-
-*[_ngcontent-ng-c1114982685] {
-  font-size: 23px !important;
-}
-i{
-  font-size: 25px;
-} */
-
-
-/*
-@media only screen and (max-width: 600px) {
-.navbar-toggler{
-  display: flex;
-}
-.navBarSearch1{
-  display: none;
-}
-}
-
-
-
-@media only screen and (min-width: 600px) {
-  .navbar-toggler{
-    display: none;
-  }
-  .navBarSearch1{
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .navbar-toggler{
-    display: none;
-  }
-  .navBarSearch1{
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .navbar-toggler{
-    display: none;
-  }
-  .navBarSearch1{
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .navbar-toggler{
-    display: none;
-  }
-}
-
-.toggile-NavMob{
-  color: white;
-}
-
-
-
-.c-nav{
-  background-color: #131313;
-}
-.c-nav p{
-  color: white;
-}
-.container{
-  width: calc(90%);
-  margin: auto;
-}
-.brand-image,.brand-text{
-  text-decoration: none;
-}
-.brand-image img{
-  width: 50px;
-  height: 50px;
-  transform: scale(1.8);
-}
-.brand-text{
-margin: 10px 0;
-}
-
-.nav-item{
-  overflow: hidden;
-  background-color: red;
-  float: left;
-  color: #E2E2E2;
-}
-
-ul{
-  color: white;
-  background-color: #D8832C;
-}
-
-
- */
-
-
-
-
-
-
-
-
-
-
-
- @font-face {
-  font-family: 'Contrast';
-  src: url('../assets/Fonts/GE-Contrast-Bold.ttf') format('truetype');
-  /* Add other font formats if necessary */
-}
-
-/* Use 'YourFontName' wherever you want to apply the custom font */
-* {
-  font-family: 'Contrast';
-}
-
-
-
- /* Navbar styles */
 .navbar {
   background-color: #343a40;
   padding: 10px 0;
@@ -244,21 +59,6 @@ ul{
   margin-bottom: 6px;
 }
 
-.active {
-  /* display: flex;
-  flex-direction: column; */
-  position: absolute;
-  bottom: 100px;
-  right: 50px;
-  width: 100px;
-  height: 100px;
-  background-color: #343a40;
-}
-/*
-.active a {
-  margin: 10px;
-} */
-
 
 @media only screen and (max-width: 600px) {
   .logo {
@@ -266,11 +66,6 @@ ul{
     width: 50px;
     height: 30px;
     margin-right: 8px;
-  }
-
-  .brand-name {
-    margin-right: 10px;
-    font-size: 18px;
   }
   .navbar-menu a {
     font-size: .9rem;
@@ -310,7 +105,7 @@ ul{
     .navbar-menu a {
       font-size: 1rem;
 
-        font-family: 'Cairo', sans-serif;
+        font-family: 'Cairo';
         font-weight: bolder;
 
     }

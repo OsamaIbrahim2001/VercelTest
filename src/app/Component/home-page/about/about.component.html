@@ -10,16 +10,40 @@
 
 <br>
 <div class="container">
-  <div class="card" *ngFor="let item of constructionItems">
+  <div class="card" *ngFor="let item of constructionItems let i=index">
+    <div class="card-image">
+      <img src="../../../../assets/Images/18.jpg" alt="Card Image" >
+    </div>
+    <div class="card-body">
 
-    <span class="card-body">
-      <div class="card-title">{{ item.name}}</div>
-      <div class="card-footer">
-      <div class="card-text">{{ item.description }}</div>
+      <div class="text">
+        <div class="card-title">{{ item.name }}</div>
+        <p class="card-text">{{ item.description }}</p>
       </div>
-    </span>
-    <span class="card-img-top"><img  src="../../../../assets/Images/1.jpg" alt="Card image cap"></span>
+      <div class="card-links">
+
+        <img src="../../../../assets/Images/tel.png"style="transform: scale(.6);" alt="">
+        <img src="../../../../assets/Images/GWhats.png" alt="">
+        <img src="../../../../assets/Images/BFace.png" >
+      </div>
+    </div>
+  </div>
+  </div>
+<br>
+  <div class="mt-8 py-5 flex justify-content items-center" style="text-align: center;">
+    <div>
+      <button class="btnPrev" (click)="previousPage()"
+      [class.disabled]="pageNumber === 1">
+      <img src="../../../../assets/Images/forward-solid.svg" width="100%" alt=""></button>
+
+      <button class="btnNumber" (click)="setPage(index)" *ngFor="let index of buttonArray"
+        [style.color]="index === pageNumber ? 'white' : '#ffbb00'"
+        [style.background-color]="index === pageNumber ? '#ffbb00' : 'initial'">{{index}}</button>
+
+      <button class="btnNext" (click)="nextPage()"
+        [class.disabled]="pageNumber * pageSize >= totalCount">
+        <img src="../../../../assets/Images/backward-solid.svg" width="100%" alt=""></button>
+    </div>
 
   </div>
-</div>
 <br>
