@@ -55,6 +55,7 @@
 .card-text {
   flex-grow: 1;
   width: calc(80%);
+  color: white;
 }
 
 .card-links {
@@ -74,22 +75,27 @@
 
 @media only screen and (max-width: 600px) {
   .card {
-    width: calc(48%);
-    height: 300px;
+    width: calc(98%);
+     height: 500px;
     margin-left: 1.5%;
   }
-  .card-image {
-    height: 55%; /* Set 60% of the card height for the image */
+  /* .card-image {
+    height: 55%;
     overflow: hidden;
   }
   .card-body {
     padding-right: 5px;
-    height: 45%; /* Set 40% of the card height for the body */
+    height: 45%;
     display: block;
     flex-direction: column;
     background-color: #000;
     position: relative;
     border-top: #ffbb00 solid 1px;
+  }
+  .text{
+    height: calc(70%);
+    display: block;
+    overflow: hidden;
   }
   .card-title {
     font-size: 12px;
@@ -99,34 +105,26 @@
     margin: 0;
     padding: 0;
     text-overflow: ellipsis;
-    white-space: nowrap; /* Prevent wrapping to new lines */
-    overflow: hidden; /* Hide overflowing text */
-    /* margin-bottom: 8px; */
+    white-space: nowrap;
+    overflow: hidden;
   }
   .card-text {
     flex-grow: 1;
-    /* line-break: 1px; */
-    /* text-overflow: clip; */
     font-size: 12px;
     font-weight: normal;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 17px;
-    /* white-space: ; */
-    /* lighting-color: #ffbb00; */
     color: white;
     padding: 0;
     margin: 0;
     width: calc(100%);
   }
   .card-links {
-    /* display: flex; */
-    position: absolute;
-    bottom: 20%;
-    left: 1%;
+    height: calc(10%);
+    padding-left: 5px;
     justify-content: flex-end;
-    width: calc(0%);
-  }
+  } */
 
 }
 
