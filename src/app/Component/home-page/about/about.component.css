@@ -68,10 +68,10 @@
 color: #FFBB00;
 }
 .fa-facebook{
-color: blue;
+color: white;
 font-size: 20px;
-background-color: white;
-padding: 4px 8px;
+background-color: blue;
+padding: 5px 8px 0 8px;
 border-radius: 50%;
 }
 .fa-whatsapp{

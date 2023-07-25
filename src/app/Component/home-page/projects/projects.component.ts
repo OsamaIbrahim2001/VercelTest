@@ -53,6 +53,13 @@ export class ProjectsComponent implements OnInit {
       coverImage:'../../../../assets/Images/21.jpg',
       images:['../../../../assets/Images/21.jpg','../../../../assets/Images/22.jpg','../../../../assets/Images/23.jpg','../../../../assets/Images/14.jpg','../../../../assets/Images/5.jpg']
     },
+    {
+      id: 1,
+      title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
+      description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
+      coverImage:'../../../../assets/Images/21.jpg',
+      images:['../../../../assets/Images/21.jpg','../../../../assets/Images/22.jpg','../../../../assets/Images/23.jpg','../../../../assets/Images/14.jpg','../../../../assets/Images/5.jpg']
+    },
     // Add more projects as needed
   ];
 
@@ -66,7 +73,7 @@ export class ProjectsComponent implements OnInit {
   selectedImage:number=0;
   totalCount: number = 11;
   pageNumber: number = 1;
-  pageSize: number = 4;
+  pageSize: number = 5;
   pageElement=0;
   buttonArray:number[]=[];
 

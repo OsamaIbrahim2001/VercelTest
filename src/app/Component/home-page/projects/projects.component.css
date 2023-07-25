@@ -14,67 +14,55 @@
 }
 
 .card {
-   width: calc(32.3333%);
   flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 20px;
-  margin-left: .5%;
-  height: 550px; /* Set the fixed height for the card */
+  position: relative;
 }
-
-.card-image {
-  height: 65%; /* Set 60% of the card height for the image */
-  overflow: hidden;
-}
-
 .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .card-body {
   padding: 10px;
-  height: 40%; /* Set 40% of the card height for the body */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   background-color: #000;
-  position: relative;
   border-top: #ffbb00 solid 1px;
 }
-
 .card-title {
-  font-size: 20px;
   font-weight: bold;
   margin-bottom: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
 .card-text {
   flex-grow: 1;
-  width: calc(80%);
+  font-weight: normal;
   color: white;
+  margin: 0;
 }
 
 .card-links {
-  /* display: flex; */
   position: absolute;
-  bottom: 15%;
-  left: 1%;
-  justify-content: flex-end;
-  width: calc(20%);
+  bottom: 5px;
+  left: 5px;
+  padding-left: 5px;
+  text-align: end;
 }
-
-.card-links img {
-  /* margin-left: 8px; */
-  width: calc(32.3333%);
-  height: 100%;
-  transform: scale(1.8);
+.card-links a{
+  font-size: 25px;
+  text-decoration: none;
+  padding-right: 5px;
 }
 
 @media only screen and (max-width: 600px) {
+  .containers .description{
+    font-size: 14px;
+  }
   .card {
     width: calc(48%);
      height: 300px;
@@ -82,105 +70,104 @@
   }
   .card-image {
     height: 55%;
-    overflow: hidden;
   }
   .card-body {
-    padding-right: 5px;
     height: 45%;
-    display: block;
-    flex-direction: column;
-    background-color: #000;
-    position: relative;
-    border-top: #ffbb00 solid 1px;
   }
   .text{
-    height: calc(70%);
-    display: block;
-    overflow: hidden;
+    max-height: calc(70%);
   }
   .card-title {
     font-size: 12px;
-    font-weight: bold;
-    display: block;
-    max-lines: 1;
     margin: 0;
-    padding: 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
   }
   .card-text {
     flex-grow: 1;
     font-size: 12px;
-    font-weight: normal;
     overflow: hidden;
-    text-overflow: ellipsis;
     line-height: 17px;
-    color: white;
-    padding: 0;
     margin: 0;
     width: calc(100%);
   }
-  .card-links {
-    height: calc(15%);
-    width: calc(50%);
-    padding-left: 5px;
-    justify-content: space-between;
-  }
-
 }
 
 @media only screen and (min-width: 600px) {
   .card {
     width: calc(48%);
-    height: 350px;
+     height: 350px;
+    margin-left: 1.5%;
   }
+  .card-image {
+    height: 55%;
+  }
+  .card-body {
+    height: 45%;
+  }
+  .text{
+    max-height: calc(75%);
+  }
+  .card-title {
+    font-size: 16px;
+    margin: 0;
+  }
+  .card-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
   .card {
-    width: calc(48%);
+    width: calc(31.3333%);
+     height: 400px;
+    margin-left: 1.5%;
+  }
+  .text{
+    max-height: calc(75%);
   }
 }
 
+
 @media only screen and (min-width: 992px) {
   .card {
-    width: calc(32.333%);
+     height: 450px;
+    margin-left: 1.5%;
+  }
+  .text{
+    max-height: calc(80%);
+  }
+  .card-title {
+    font-size: 19px;
+  }
+  .card-text {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .card {
-    width: calc(32.333%);
+    width: calc(23%);
+     height: 500px;
+    margin-left: 1.5%;
+  }
+  .card-image {
+    height: 55%;
+  }
+  .card-body {
+    height: 45%;
+  }
+  .text{
+    max-height: calc(80%);
+  }
+  .card-title {
+    font-size: 19px;
+    margin-bottom: 3px;
+  }
+  .card-text {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
-.btnNumber {
-  color: #131313;
-  border: none;
-  background-color: white;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 12px;
-  border-radius: 50%;
-}
-
-.btnPrev,.btnNext {
-  border-radius: 6px;
-  background-color: #ffbb00;
-  border: none;
-  height: 30px;
-  padding-top: 5px;
-  width: 30px;
-}
-.btnPrev{
-    margin-left: 10px;
-}
-.btnNext {
-  margin-right: 10px;
-}
-
-.disabled {
-  opacity: 50%;
-}
