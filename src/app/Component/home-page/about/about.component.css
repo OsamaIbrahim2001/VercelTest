@@ -134,5 +134,232 @@
   }
 }
 
+@media only screen and (min-width: 600px) {
+  .containers .description{
+    font-size: 16px;
+  }
+  .card {
+    width: calc(48%);
+     height: 350px;
+    margin-left: 1.5%;
+  }
+  .card-image {
+    height: 55%;
+    overflow: hidden;
+  }
+  .card-body {
+    padding-right: 5px;
+    height: 45%;
+    display: block;
+    flex-direction: column;
+    background-color: #000;
+    position: relative;
+    border-top: #ffbb00 solid 1px;
+  }
+  .text{
+    height: calc(70%);
+    display: block;
+    overflow: hidden;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: bold;
+    display: block;
+    max-lines: 1;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .card-text {
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 17px;
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: calc(100%);
+  }
+  .card-links {
+    height: calc(20%);
+    width: calc(100%);
+    padding-left: 5px;
+    justify-content: space-between;
+  }
+}
 
+@media only screen and (min-width: 768px) {
+  .containers .description{
+    font-size: 19px;
+  }
+  .card {
+    width: calc(31.3333%);
+     height: 350px;
+    margin-left: 1.5%;
+  }
+  .card-image {
+    height: 55%;
+    overflow: hidden;
+  }
+  .card-body {
+    padding-right: 5px;
+    height: 45%;
+    display: block;
+    flex-direction: column;
+    background-color: #000;
+    position: relative;
+    border-top: #ffbb00 solid 1px;
+  }
+  .text{
+    height: calc(70%);
+    display: block;
+    overflow: hidden;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: bold;
+    display: block;
+    max-lines: 1;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .card-text {
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 17px;
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: calc(100%);
+  }
+  .card-links {
+    height: calc(15%);
+    width: calc(60%);
+    padding-left: 5px;
+    justify-content: space-between;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    width: calc(31.3333%);
+     height: 450px;
+    margin-left: 1.5%;
+  }
+  .card-image {
+    height: 58%;
+    overflow: hidden;
+  }
+  .card-body {
+    padding-right: 5px;
+    height: 42%;
+    display: block;
+    flex-direction: column;
+    background-color: #000;
+    position: relative;
+    border-top: #ffbb00 solid 1px;
+  }
+  .text{
+    height: calc(70%);
+    display: block;
+    overflow: hidden;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    max-lines: 1;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .card-text {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 17px;
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: calc(100%);
+  }
+  .card-links {
+    height: calc(15%);
+    width: calc(50%);
+    padding-left: 5px;
+    justify-content: space-between;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: calc(23.9%);
+     height: 500px;
+    margin-left: .9%;
+  }
+  .card-image {
+    height: 55%;
+    overflow: hidden;
+  }
+  .card-body {
+    padding-right: 5px;
+    height: 45%;
+    display: block;
+    flex-direction: column;
+    background-color: #000;
+    position: relative;
+    border-top: #ffbb00 solid 1px;
+  }
+  .text{
+    height: calc(80%);
+    display: block;
+    overflow: hidden;
+  }
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    max-lines: 1;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .card-text {
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: calc(100%);
+  }
+  .card-links {
+    height: calc(15%);
+    width: calc(50%);
+    padding-left: 5px;
+    justify-content: space-between;
+  }
+
+}
 
