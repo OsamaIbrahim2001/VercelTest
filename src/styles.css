@@ -25,6 +25,35 @@
   font-family: 'Cairo';
 }
 
+.btnNumber {
+  color: #131313;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 12px;
+  border-radius: 50%;
+}
+
+.btnPrev,.btnNext {
+  border-radius: 6px;
+  background-color: #ffbb00;
+  border: none;
+  height: 30px;
+  padding-top: 5px;
+  width: 30px;
+}
+.btnPrev{
+    margin-left: 10px;
+}
+.btnNext {
+  margin-right: 10px;
+}
+
+.disabled {
+  opacity: 50%;
+}
 
 
 /*
