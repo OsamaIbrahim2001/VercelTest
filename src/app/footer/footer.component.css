@@ -1,9 +1,4 @@
-.footerW {
-  /* background-color: #333; */
-  color: white;
-  padding: 20px;
-  font-size: 18px;
-}
+
 
 .footer {
   max-width: 1200px;
@@ -18,24 +13,13 @@
   justify-content: space-evenly;
 }
 
-.items div {
-  padding: 5px 10px;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-}
-
-.col-1 {
-  flex: 0 0 8.3333%;
-  max-width: 8.3333%;
-}
-
 .text-center {
   text-align: center;
 }
 
-.text-light {
+a {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Monadi';
   color: white;
 }

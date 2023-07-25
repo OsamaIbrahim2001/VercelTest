@@ -24,6 +24,11 @@
 * {
   font-family: 'Cairo';
 }
+.card-links a{
+  font-size: 25px;
+  text-decoration: none;
+  padding-right: 15px;
+}
 .fa-phone{
   color: #FFBB00;
   }

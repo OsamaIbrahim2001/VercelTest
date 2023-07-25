@@ -1,11 +1,4 @@
 import { Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
-// import { UnitBuild } from 'src/app/unit-building/Model/unit-build';
-// import { UnitBuildService } from 'src/app/Services/UnitBuildingService/unit-build.service';
-// import { UnitBycity } from 'src/app/unit-building/Model/unit-bycity';
-import { Router } from '@angular/router';
-// import { HomePageService } from 'src/app/Services/HomePageService/home-page.service';
-import { DomSanitizer } from '@angular/platform-browser';
-import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
 import { ScrollService } from 'src/app/Shared/scroll.service';
 
@@ -20,7 +13,6 @@ import { ScrollService } from 'src/app/Shared/scroll.service';
 export class HomePageComponent implements OnDestroy{
 
   @ViewChild('contact') contactElement!: ElementRef;
-  // @ViewChild('contact') contactElement!: ElementRef;
   @ViewChild('equipment') equipmentElement!: ElementRef;
   @ViewChild('projects') worksElement!: ElementRef;
   @ViewChild('about') aboutElement!: ElementRef;

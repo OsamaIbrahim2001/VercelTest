@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomePageService } from './Services/home-page.service';
-import { DomSanitizer } from '@angular/platform-browser';
 import { ScrollService } from './Shared/scroll.service';
 
 @Component({

@@ -20,47 +20,72 @@ export class ProjectsComponent implements OnInit {
   projects = [
     {
       id: 1,
-      title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
-      coverImage:'../../../../assets/Images/1.jpg',
-      description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
-    images:['../../../../assets/Images/1.jpg','../../../../assets/Images/2.jpg','../../../../assets/Images/3.jpg','../../../../assets/Images/4.jpg','../../../../assets/Images/5.jpg']
+      title: 'رصف طريق بجدة',
+      coverImage:"../../../../assets/Images/رصف طريق/2.jpg",
+      description:'رصف طريق بجدة رصف طريق بجدة',
+     images:["../../../../assets/Images/رصف طريق/2.jpg",
+     "../../../../assets/Images/رصف طريق/1.jpg",
+     "../../../../assets/Images/رصف طريق/3.jpg",
+     "../../../../assets/Images/رصف طريق/4.jpg",
+     "../../../../assets/Images/رصف طريق/5.jpg"]
     },
     {
       id: 1,
-      title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
-      description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
-      coverImage:'../../../../assets/Images/6.jpg',
-      images:['../../../../assets/Images/6.jpg','../../../../assets/Images/7.jpg','../../../../assets/Images/8.jpg','../../../../assets/Images/9.jpg','../../../../assets/Images/10.jpg']
+      title: 'تشطيب شقة بالرياض',
+      description: 'تشطيب شقة بالرياضتشطيب شقة بالرياض تشطيب شقة بالرياض',
+      coverImage:"../../../../assets/Images/تشطيبات/2.jpg",
+      images:["../../../../assets/Images/تشطيبات/2.jpg",
+      "../../../../assets/Images/تشطيبات/1.jpg",
+      "../../../../assets/Images/تشطيبات/3.jpg",
+      "../../../../assets/Images/تشطيبات/4.jpg",
+      "../../../../assets/Images/تشطيبات/5.jpg",
+      ]
     },
     {
       id: 1,
-      title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
-      description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
-      coverImage:'../../../../assets/Images/11.jpg',
-      images:['../../../../assets/Images/11.jpg','../../../../assets/Images/12.jpg','../../../../assets/Images/13.jpg','../../../../assets/Images/14.jpg','../../../../assets/Images/15.jpg']
+      title: 'إنشاء برج بالرياض',
+      description: 'إنشاء برج بالرياض إنشاء برج بالرياض إنشاء برج بالرياض',
+      coverImage:"../../../../assets/Images/إنشاء مباني/2.jpg",
+      images:["../../../../assets/Images/إنشاء مباني/2.jpg",
+      "../../../../assets/Images/إنشاء مباني/1.jpg",
+      "../../../../assets/Images/إنشاء مباني/3.jpg",
+      "../../../../assets/Images/إنشاء مباني/4.jpg",
+      "../../../../assets/Images/إنشاء مباني/5.jpg"]
     },
     {
       id: 1,
-      title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
-      description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
-      coverImage:'../../../../assets/Images/16.jpg',
-      images:['../../../../assets/Images/16.jpg','../../../../assets/Images/17.jpg','../../../../assets/Images/18.jpg','../../../../assets/Images/19.jpg','../../../../assets/Images/20.jpg']
+      title: 'إزالة الدهانات الخان',
+      description: 'إزالة الدهانات الخان إزالة الدهانات الخان إزالة الدهانات الخان',
+      coverImage:'../../../../assets/Images/ازالة الدهانات/2.jpg',
+      images:['../../../../assets/Images/ازالة الدهانات/2.jpg',
+      '../../../../assets/Images/ازالة الدهانات/1.jpg',
+      '../../../../assets/Images/ازالة الدهانات/3.jpg',
+      '../../../../assets/Images/ازالة الدهانات/4.jpg',
+      '../../../../assets/Images/ازالة الدهانات/5.jpg']
     },
     {
       id: 1,
-      title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
-      description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
-      coverImage:'../../../../assets/Images/21.jpg',
-      images:['../../../../assets/Images/21.jpg','../../../../assets/Images/22.jpg','../../../../assets/Images/23.jpg','../../../../assets/Images/14.jpg','../../../../assets/Images/5.jpg']
+      title: 'قص خرسانة',
+      description: 'قص خرسانة قص خرسانة قص خرسانة قص خرسانة',
+      coverImage:"../../../../assets/Images/قص خرسانة/2.jpg",
+      images:["../../../../assets/Images/قص خرسانة/2.jpg",
+      "../../../../assets/Images/قص خرسانة/1.jpg",
+      "../../../../assets/Images/قص خرسانة/3.jpg",
+      "../../../../assets/Images/قص خرسانة/4.jpg",
+      "../../../../assets/Images/قص خرسانة/5.jpg"
+    ]
     },
     {
       id: 1,
-      title: 'تطوير مركز فيرجينيا جامعة الاسكندرية',
-      description: 'تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية تطوير مركز فيرجينيا جامعة الاسكندرية',
-      coverImage:'../../../../assets/Images/21.jpg',
-      images:['../../../../assets/Images/21.jpg','../../../../assets/Images/22.jpg','../../../../assets/Images/23.jpg','../../../../assets/Images/14.jpg','../../../../assets/Images/5.jpg']
+      title: 'إزالة الصبغ',
+      description: 'إزالة الصبغ إزالة الصبغ إزالة الصبغ',
+      coverImage:"../../../../assets/Images/إزالة الصبغ/2.jpg",
+      images:["../../../../assets/Images/إزالة الصبغ/2.jpg",
+      "../../../../assets/Images/إزالة الصبغ/1.jpg",
+      "../../../../assets/Images/إزالة الصبغ/3.jpg",
+      "../../../../assets/Images/إزالة الصبغ/4.jpg",
+      "../../../../assets/Images/إزالة الصبغ/5.jpg"]
     },
-    // Add more projects as needed
   ];
 
   ngOnInit(): void {

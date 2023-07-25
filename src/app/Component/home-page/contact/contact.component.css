@@ -1,5 +1,6 @@
 .backImage{
   background-image: url('../../../../assets/Images/cover1.png');
+
 }
 .container {
   color: #ffbb00;
@@ -30,6 +31,31 @@
   margin-left: 15px;
 }
 
+.links a{
+color: white;
+text-decoration: none;
+font-size: 25px;
+}
+.links a .fa-phone{
+  color: #ffbb00;
+  font-size: 30px;
+  padding-right: 10px;
+  }
+  .fa-envelope{
+    padding-right: 10px;
+  }
+.fa-facebook{
+  font-size: 30px;
+  margin-left: 15px;
+}
+.fa-whatsapp{
+  font-size: 30px;
+  margin:0 15px;
+}
+.fa-map-marker{
+  font-size: 35px;
+  padding-right: 10px;
+}
 @media only screen and (max-width: 600px) {
 
 }

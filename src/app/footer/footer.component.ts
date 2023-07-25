@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from '../Shared/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,7 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  scrollToTop() {
-    window.scrollTo(0, 0);
+  constructor(private scrollService: ScrollService){}
+  scrollTo(componentId: string) {
+    this.scrollService.scrollToComponent(componentId);
   }
 }
