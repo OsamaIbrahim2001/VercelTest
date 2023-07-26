@@ -28,6 +28,10 @@ export class EquipmentsComponent implements OnInit {
       title: 'بونطة',
       image:"../../../../assets/Images/معدات/بونطة.jpg"
     },
+    {
+      title: 'منشار',
+      image:"../../../../assets/Images/معدات/منشار.jpg"
+    },
     // Add more projects as needed
   ];
 
