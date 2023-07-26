@@ -6,6 +6,14 @@
 h4{
   color: white;
 }
+.full-width-container {
+  display: flex;
+  justify-content: center;
+}
+.full-width {
+  width: 100%;
+  /* max-width: 600px; Optionally, set a maximum width for the form field */
+}
 select{
   width: 100%;
 }
