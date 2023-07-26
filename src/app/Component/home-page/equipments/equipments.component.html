@@ -4,7 +4,7 @@
   <div class="h2">المعدات</div>
 <br>
   <div class="card" *ngFor="let item of projects let i=index">
-    <div class="card-image">
+  <a style="text-decoration: none; color: #ffbb00;" href="equipmentDetails">  <div class="card-image">
       <img [src]="item.image" alt="Card Image" >
     </div>
     <div class="card-body">
@@ -12,6 +12,7 @@
         <div class="card-title">{{ item.title }}</div>
       </div>
     </div>
+  </a>
   </div>
   </div>
 <br>

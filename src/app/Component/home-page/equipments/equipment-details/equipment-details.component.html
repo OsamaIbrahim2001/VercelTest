@@ -1,1 +1,76 @@
-<p>equipment-details works!</p>
+<div class="container">
+  <div class="header"></div>
+
+  <form>
+    <h4>mat-select</h4>
+    <mat-form-field>
+      <mat-label>Favorite food</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="food">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p> Selected food: {{selectedValue}} </p>
+
+  </form>
+
+
+  <table>
+    <tr>
+      <td>الاسم</td>
+      <td>منشار</td>
+    </tr>
+    <tr >
+      <td>النوع</td>
+      <td>منشار خشاب</td>
+    </tr>
+    <tr>
+      <td>الماركة</td>
+      <td>GS3</td>
+    </tr>
+    <tr >
+      <td>مدة الايجار</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>السعر</td>
+      <td></td>
+    </tr>
+  </table>
+
+<div>الصورة</div>
+<div>
+  <h4>الوصف</h4>
+</div>
+
+
+<table class="custom-table">
+  <!-- Table header -->
+
+  <tbody>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+    </tr>
+    <tr>
+      <td>Data 4</td>
+      <td>Data 5</td>
+    </tr>
+    <tr>
+      <td>Data 4</td>
+      <td>Data 5</td>
+    </tr>
+    <tr>
+      <td>Data 4</td>
+      <td>Data 5</td>
+    </tr>
+    <tr>
+      <td>Data 4</td>
+      <td>Data 5</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+</div>
