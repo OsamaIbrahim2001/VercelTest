@@ -68,124 +68,100 @@ font-size: 25px;
 
 .social,.location{
   width: 100%;
+  margin-bottom: 15px;
 }
 .social a,.location a{
 text-decoration: none;
 color: white;
-font-size: 25px;
 }
 
 .fa-facebook{
-  font-size: 30px;
   margin-left: 15px;
 }
 .fa-whatsapp{
-  font-size: 30px;
   margin:0 15px;
 }
 .fa-map-marker{
-  font-size: 35px;
   margin:0 0 0 15px;
   color: red;
 }
 @media only screen and (max-width: 600px) {
   .card2{
-    width: calc(30%);
+    width: calc(40%);
   }
-  .card1{ width:calc(67%);}
+  .card1{ width:calc(57%);}
   .card-body a{
     font-size: 19px !important;
   }
   .card-body a i{
     font-size: 18px;
   }
-  .fa-facebook,.fa-map-marker,.fa-whatsapp{
+  .fa-facebook,.fa-whatsapp{
     font-size: 20px;
+  }
+  .fa-map-marker{
+    font-size: 35px;
   }
   .social a,.location a{
     font-size: 19px;
-  }
-  .up{
-    margin-right: 20px;
-  }
-  .up i{
-    font-size: 20px;
-    padding: 7px;
   }
 
 }
 
 @media only screen and (min-width: 600px) {
   .card2{
-    width: calc(35%);
+    width: calc(42%);
   }
-  .card1{ width:calc(60%);}
+  .card1{ width:calc(55%);}
   .card-body a{
     font-size: 19px !important;
   }
   .card-body a i{
     font-size: 19px;
   }
-  .fa-facebook,.fa-map-marker,.fa-whatsapp{
+  .fa-facebook,.fa-whatsapp{
     font-size: 22px;
+  }
+  .fa-map-marker{
+    font-size: 40px;
   }
   .social a,.location a{
     font-size: 21px;
-  }
-  .up{
-    margin-right: 25px;
-  }
-  .up i{
-    font-size: 25px;
-    padding: 10px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .card2{
-    width: calc(38%);
+    width: calc(45%);
   }
-  .card1{ width:calc(57%);}
+  .card1{ width:calc(52%);}
   .card-body a{
     font-size: 21px !important;
   }
   .card-body a i{
     font-size: 21px;
   }
-  .fa-facebook,.fa-map-marker,.fa-whatsapp{
+  .fa-facebook,.fa-whatsapp{
     font-size: 25px;
   }
   .social a,.location a{
     font-size: 24px;
   }
-  .up{
-    margin-right: 30px;
-  }
-  .up i{
-    font-size: 30px;
-    padding: 10px;
-  }
 }
 
 @media only screen and (min-width: 992px) {
   .card2{
-    width: calc(40%);
+    width: calc(47%);
   }
-  .card1{ width:calc(57%);}
+  .card1{ width:calc(47%);}
   .card-body a{
     font-size: 25px !important;
   }
   .card-body a i{
     font-size: 25px;
   }
-  .fa-facebook,.fa-map-marker,.fa-whatsapp{
+  .fa-facebook,.fa-whatsapp{
     font-size: 28px;
-  }
-  .social a,.location a{
-    font-size: 28px;
-  }
-  .up{
-    margin-right: 40px;
   }
 }
 
@@ -203,13 +179,7 @@ font-size: 25px;
 .card-body a i{
   font-size: 26px;
 }
-.fa-facebook,.fa-map-marker,.fa-whatsapp{
+.fa-facebook,.fa-whatsapp{
   font-size: 30px;
-}
-.social a,.location a{
-  font-size: 28px;
-}
-.up{
-  margin-right: 50px;
 }
 }
