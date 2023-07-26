@@ -28,13 +28,11 @@ color: #ffbb00;
   font-weight: bold;
 }
 
-.card {
+.card1,.card2{
   flex-direction: column;
-  /* border: 2px solid #ffbb00; */
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 20px;
-  width: 47%;
   margin-left: 1.5%;
   height: 300px;
 }
@@ -42,7 +40,6 @@ color: #ffbb00;
 .card-body{
   height: 100%;
   margin: 100px 0;
-  /* text-align: center; */
 }
 
 .card-body a{
@@ -92,6 +89,10 @@ font-size: 25px;
   color: red;
 }
 @media only screen and (max-width: 600px) {
+  .card2{
+    width: calc(40%);
+  }
+  .card1{ width:calc(55%);}
   .card-body a{
     font-size: 17px;
   }
