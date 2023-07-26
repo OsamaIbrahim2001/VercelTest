@@ -3,9 +3,11 @@
 
 }
 .container {
-  color: #ffbb00;
   width: 90%;
-  margin: 0 auto;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+color: #ffbb00;
 }
 .header {
   text-align: center;
@@ -14,7 +16,9 @@
   font-weight: bold;
 }
 .contactBtn{
+  margin: 20px 0;
   text-align: center;
+  width: 100%;
 }
 .contactBtn span{
   color: white;
@@ -23,6 +27,34 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+.card {
+  flex-direction: column;
+  /* border: 2px solid #ffbb00; */
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 47%;
+  margin-left: 1.5%;
+  height: 300px;
+}
+
+.card-body{
+  height: 100%;
+  margin: 100px 0;
+  /* text-align: center; */
+}
+
+.card-body a{
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+.card-body a i{
+  font-size: 25px;
+  padding-left: 10px;
+}
+
 
 .phoneText{
   font-size: 24px;
@@ -36,14 +68,16 @@ color: white;
 text-decoration: none;
 font-size: 25px;
 }
-.links a .fa-phone{
-  color: #ffbb00;
-  font-size: 30px;
-  padding-right: 10px;
-  }
-  .fa-envelope{
-    padding-right: 10px;
-  }
+
+.social,.location{
+  width: 100%;
+}
+.social a,.location a{
+text-decoration: none;
+color: white;
+font-size: 25px;
+}
+
 .fa-facebook{
   font-size: 30px;
   margin-left: 15px;
@@ -54,24 +88,112 @@ font-size: 25px;
 }
 .fa-map-marker{
   font-size: 35px;
-  padding-right: 10px;
+  margin:0 0 0 15px;
+  color: red;
 }
 @media only screen and (max-width: 600px) {
+  .card-body a{
+    font-size: 17px;
+  }
+  .card-body a i{
+    font-size: 16px;
+  }
+  .fa-facebook,.fa-map-marker,.fa-whatsapp{
+    font-size: 20px;
+  }
+  .social a,.location a{
+    font-size: 19px;
+  }
+  .up{
+    margin-right: 20px;
+  }
+  .up i{
+    font-size: 20px;
+    padding: 7px;
+  }
 
 }
 
 @media only screen and (min-width: 600px) {
-
+  .card-body a{
+    font-size: 19px !important;
+  }
+  .card-body a i{
+    font-size: 19px;
+  }
+  .fa-facebook,.fa-map-marker,.fa-whatsapp{
+    font-size: 22px;
+  }
+  .social a,.location a{
+    font-size: 21px;
+  }
+  .up{
+    margin-right: 25px;
+  }
+  .up i{
+    font-size: 25px;
+    padding: 10px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-
+  .card-body a{
+    font-size: 21px !important;
+  }
+  .card-body a i{
+    font-size: 21px;
+  }
+  .fa-facebook,.fa-map-marker,.fa-whatsapp{
+    font-size: 25px;
+  }
+  .social a,.location a{
+    font-size: 24px;
+  }
+  .up{
+    margin-right: 30px;
+  }
+  .up i{
+    font-size: 30px;
+    padding: 10px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-
+  .card-body a{
+    font-size: 25px !important;
+  }
+  .card-body a i{
+    font-size: 25px;
+  }
+  .fa-facebook,.fa-map-marker,.fa-whatsapp{
+    font-size: 28px;
+  }
+  .social a,.location a{
+    font-size: 28px;
+  }
+  .up{
+    margin-right: 40px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
 
+.card{
+  height: 400px;
+}
+.card-body a{
+  font-size: 28px !important;
+}
+.card-body a i{
+  font-size: 26px;
+}
+.fa-facebook,.fa-map-marker,.fa-whatsapp{
+  font-size: 30px;
+}
+.social a,.location a{
+  font-size: 28px;
+}
+.up{
+  margin-right: 50px;
+}
 }

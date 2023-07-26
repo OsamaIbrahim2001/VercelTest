@@ -17,9 +17,43 @@
   text-align: center;
 }
 
-a {
-  font-size: 30px;
-  font-weight: bold;
+a{
   font-family: 'Monadi';
   color: white;
 }
+
+@media only screen and (max-width: 600px) {
+  a {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  a {
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  a {
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  a {
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  a {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
