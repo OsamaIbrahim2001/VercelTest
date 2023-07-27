@@ -1,77 +1,43 @@
 <div class="container">
-  <div class="header"></div>
-
-  <div class="full-width-container">
+  <div class="h2">منشار</div>
+<br>
+<div class="full-width-container">
   <form class="full-width">
-    <h4>mat-select</h4>
-    <mat-form-field class="full-width">
-      <mat-label>Favorite food</mat-label>
-      <mat-select [(ngModel)]="selectedValue" name="food">
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{food.viewValue}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <p> Selected food: {{selectedValue}} </p>
-
+      <mat-label>اختر المعدة</mat-label>
+      <select name="index"  [(ngModel)]="index" (change)="changeSelection()" id="">
+        <option  *ngFor="let food of foods let i=index" [value]="i">
+          {{food.name}}
+        </option>
+      </select>
   </form>
 </div>
-
-  <table>
+<br><br>
+<br>
+<table class="custom-table">
+  <tbody>
     <tr>
       <td>الاسم</td>
-      <td>منشار</td>
+      <td>{{equipment.name}}</td>
     </tr>
-    <tr >
+    <tr>
       <td>النوع</td>
-      <td>منشار خشاب</td>
+      <td>{{equipment.type}}</td>
     </tr>
     <tr>
       <td>الماركة</td>
-      <td>GS3</td>
-    </tr>
-    <tr >
-      <td>مدة الايجار</td>
-      <td></td>
+      <td>{{equipment.model}}</td>
     </tr>
     <tr>
-      <td>السعر</td>
-      <td></td>
+      <td>الوصف</td>
+      <td>{{equipment.descripion}}</td>
     </tr>
-  </table>
-
-<div>الصورة</div>
-<div>
-  <h4>الوصف</h4>
-</div>
-
-
-<table class="custom-table">
-  <!-- Table header -->
-
-  <tbody>
-    <tr>
-      <td>Data 1</td>
-      <td>Data 2</td>
-    </tr>
-    <tr>
-      <td>Data 4</td>
-      <td>Data 5</td>
-    </tr>
-    <tr>
-      <td>Data 4</td>
-      <td>Data 5</td>
-    </tr>
-    <tr>
-      <td>Data 4</td>
-      <td>Data 5</td>
-    </tr>
-    <tr>
-      <td>Data 4</td>
-      <td>Data 5</td>
-    </tr>
-    <!-- Add more rows as needed -->
   </tbody>
 </table>
 
-</div>
+  <div class="card" *ngIf="equipment.image">
+      <div class="card-image">
+      <img [src]="equipment.image" alt="Card Image" >
+    </div>
+  </div>
+  </div>
+
