@@ -52,13 +52,7 @@
   margin: 0;
 }
 
-.card-links {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  padding-left: 5px;
-  text-align: end;
-}
+
 
 @media only screen and (max-width: 600px) {
   .containers .description{
@@ -74,9 +68,6 @@
   }
   .card-body {
     height: 45%;
-  }
-  .text{
-    max-height: calc(70%);
   }
   .card-title {
     font-size: 12px;
@@ -104,9 +95,7 @@
   .card-body {
     height: 45%;
   }
-  .text{
-    max-height: calc(75%);
-  }
+
   .card-title {
     font-size: 16px;
     margin: 0;

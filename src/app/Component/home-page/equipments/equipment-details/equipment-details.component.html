@@ -41,3 +41,33 @@
   </div>
   </div>
 
+
+  <div class="containerLap">
+    <div class="header" style="color: white;">
+      منشار
+    </div>
+    <table style="color: white;">
+      <thead class="headerTable">
+        <th>#</th>
+        <th>الاسم</th>
+        <th>النوع</th>
+        <th>الماركة</th>
+        <th>الوصف</th>
+        <th>الصورة</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of foods let i=index">
+          <td class="count">{{i+1}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.type}}</td>
+          <td>{{item.model}}</td>
+          <td>{{item.descripion}}</td>
+          <td>
+            <div style=" width: 100px; height: 100px;">
+              <img [src]="item.image" alt="" width="100%" height="100%">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
