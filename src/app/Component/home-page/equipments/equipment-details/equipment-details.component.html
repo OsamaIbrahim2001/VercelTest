@@ -5,7 +5,7 @@
   <form class="full-width">
       <mat-label>اختر المعدة</mat-label>
       <select name="index"  [(ngModel)]="index" (change)="changeSelection()" id="">
-        <option  *ngFor="let food of foods let i=index" [value]="i">
+        <option  *ngFor="let food of equipments let i=index" [value]="i">
           {{food.name}}
         </option>
       </select>
@@ -17,26 +17,22 @@
   <tbody>
     <tr>
       <td>الاسم</td>
-      <td>{{equipment.name}}</td>
-    </tr>
-    <tr>
-      <td>النوع</td>
-      <td>{{equipment.type}}</td>
+      <td>{{equipments[index].name}}</td>
     </tr>
     <tr>
       <td>الماركة</td>
-      <td>{{equipment.model}}</td>
+      <td>{{equipments[index].model}}</td>
     </tr>
     <tr>
       <td>الوصف</td>
-      <td>{{equipment.descripion}}</td>
+      <td>{{equipments[index].description}}</td>
     </tr>
   </tbody>
 </table>
 
-  <div class="card" *ngIf="equipment.image">
+  <div class="card" *ngIf="equipments[index].image">
       <div class="card-image">
-      <img [src]="equipment.image" alt="Card Image" >
+      <img [src]="'http://localhost:5219/Images/'+equipments[index].image" alt="Card Image" >
     </div>
   </div>
   </div>
@@ -50,21 +46,19 @@
       <thead class="headerTable">
         <th>#</th>
         <th>الاسم</th>
-        <th>النوع</th>
         <th>الماركة</th>
         <th>الوصف</th>
         <th>الصورة</th>
       </thead>
       <tbody>
-        <tr *ngFor="let item of foods let i=index">
+        <tr *ngFor="let item of equipments let i=index">
           <td class="count">{{i+1}}</td>
           <td>{{item.name}}</td>
-          <td>{{item.type}}</td>
           <td>{{item.model}}</td>
-          <td>{{item.descripion}}</td>
+          <td>{{item.description}}</td>
           <td>
             <div style=" width: 100px; height: 100px;">
-              <img [src]="item.image" alt="" width="100%" height="100%">
+              <img [src]="'http://localhost:5219/Images/'+item.image" alt="" width="100%" height="100%">
             </div>
           </td>
         </tr>

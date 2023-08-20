@@ -5,7 +5,7 @@ import { EquipmentDetailsComponent } from './Component/home-page/equipments/equi
 
 const routes: Routes = [
   {path : '' , redirectTo:'/homepage', pathMatch:'full'},
-  {path : 'equipmentDetails',component:EquipmentDetailsComponent},
+  {path : 'equipmentDetails/:id',component:EquipmentDetailsComponent},
   {path : '**' , component : HomePageComponent},
 ];
 

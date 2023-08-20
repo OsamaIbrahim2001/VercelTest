@@ -1,5 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Workes } from 'src/app/Models/workes';
+import { ProjectsService } from 'src/app/Services/Projects/projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -17,78 +19,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects = [
-    {
-      id: 1,
-      title: 'رصف طريق بجدة',
-      coverImage:"../../../../assets/Images/رصف طريق/2.jpg",
-      description:'رصف طريق بجدة رصف طريق بجدة',
-     images:["../../../../assets/Images/رصف طريق/2.jpg",
-     "../../../../assets/Images/رصف طريق/1.jpg",
-     "../../../../assets/Images/رصف طريق/3.jpg",
-     "../../../../assets/Images/رصف طريق/4.jpg",
-     "../../../../assets/Images/رصف طريق/5.jpg"]
-    },
-    {
-      id: 1,
-      title: 'تشطيب شقة بالرياض',
-      description: 'تشطيب شقة بالرياضتشطيب شقة بالرياض تشطيب شقة بالرياض',
-      coverImage:"../../../../assets/Images/تشطيبات/2.jpg",
-      images:["../../../../assets/Images/تشطيبات/2.jpg",
-      "../../../../assets/Images/تشطيبات/1.jpg",
-      "../../../../assets/Images/تشطيبات/3.jpg",
-      "../../../../assets/Images/تشطيبات/4.jpg",
-      "../../../../assets/Images/تشطيبات/5.jpg",
-      ]
-    },
-    {
-      id: 1,
-      title: 'إنشاء برج بالرياض',
-      description: 'إنشاء برج بالرياض إنشاء برج بالرياض إنشاء برج بالرياض',
-      coverImage:"../../../../assets/Images/إنشاء مباني/2.jpg",
-      images:["../../../../assets/Images/إنشاء مباني/2.jpg",
-      "../../../../assets/Images/إنشاء مباني/1.jpg",
-      "../../../../assets/Images/إنشاء مباني/3.jpg",
-      "../../../../assets/Images/إنشاء مباني/4.jpg",
-      "../../../../assets/Images/إنشاء مباني/5.jpg"]
-    },
-    {
-      id: 1,
-      title: 'إزالة الدهانات الخان',
-      description: 'إزالة الدهانات الخان إزالة الدهانات الخان إزالة الدهانات الخان',
-      coverImage:'../../../../assets/Images/ازالة الدهانات/2.jpg',
-      images:['../../../../assets/Images/ازالة الدهانات/2.jpg',
-      '../../../../assets/Images/ازالة الدهانات/1.jpg',
-      '../../../../assets/Images/ازالة الدهانات/3.jpg',
-      '../../../../assets/Images/ازالة الدهانات/4.jpg',
-      '../../../../assets/Images/ازالة الدهانات/5.jpg']
-    },
-    {
-      id: 1,
-      title: 'قص خرسانة',
-      description: 'قص خرسانة قص خرسانة قص خرسانة قص خرسانة',
-      coverImage:"../../../../assets/Images/قص خرسانة/2.jpg",
-      images:["../../../../assets/Images/قص خرسانة/2.jpg",
-      "../../../../assets/Images/قص خرسانة/1.jpg",
-      "../../../../assets/Images/قص خرسانة/3.jpg",
-      "../../../../assets/Images/قص خرسانة/4.jpg",
-      "../../../../assets/Images/قص خرسانة/5.jpg"
-    ]
-    },
-    {
-      id: 1,
-      title: 'إزالة الصبغ',
-      description: 'إزالة الصبغ إزالة الصبغ إزالة الصبغ',
-      coverImage:"../../../../assets/Images/إزالة الصبغ/2.jpg",
-      images:["../../../../assets/Images/إزالة الصبغ/2.jpg",
-      "../../../../assets/Images/إزالة الصبغ/1.jpg",
-      "../../../../assets/Images/إزالة الصبغ/3.jpg",
-      "../../../../assets/Images/إزالة الصبغ/4.jpg",
-      "../../../../assets/Images/إزالة الصبغ/5.jpg"]
-    },
-  ];
+  projects:Workes[] = [];
 
+  constructor(private services:ProjectsService){}
   ngOnInit(): void {
+    this.getProjects();
     this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
 
     this.buttonArray= Array(this.pageElement).fill(0).map((_, index) => index + 1);
@@ -152,9 +87,16 @@ clearInterval(){
   }
 }
 
-  // nextSlide() {
-  //   this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
-  //   this.selectedImage=this.slides[this.currentSlideIndex].image;
-  //   // this.showSlide(this.currentSlideIndex);
-  // }
+getProjects(){
+  this.services.getProjects(this.pageNumber,this.pageSize).subscribe({
+    next:(value)=> {
+      this.projects=value.data;
+      console.log("Projects==========>>>>> ",this.projects);
+
+      this.totalCount=value.totalCount;
+      this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
+      this.buttonArray= Array(this.pageElement).fill(0).map((_, index) => index + 1);
+    },
+  });
+}
 }

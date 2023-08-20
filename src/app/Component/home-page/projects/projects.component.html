@@ -4,12 +4,12 @@
 <div class="container">
   <div class="card" *ngFor="let item of projects let i=index">
     <div class="card-image" (touchstart)="changeImage(i)"  (mouseenter)="changeImage(i)" (mouseout)="resetImage(i)">
-      <img [src]="item.coverImage" alt="Card Image" >
+      <img [src]="'http://localhost:5219/Images/'+item.coverImage" alt="Card Image" >
     </div>
     <div class="card-body">
 
       <div class="text">
-        <div class="card-title">{{ item.title }}</div>
+        <div class="card-title">{{ item.name }}</div>
         <p class="card-text">{{ item.description }}</p>
       </div>
     </div>

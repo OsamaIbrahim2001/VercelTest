@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/Models/equipments';
+import { EquipmentsService } from 'src/app/Services/Equipments/equipments.service';
 
 @Component({
   selector: 'app-equipments',
@@ -7,60 +9,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipmentsComponent implements OnInit {
 
-  projects = [
-    {
-      title: 'هوندا',
-      image:"../../../../assets/Images/معدات/هوندا.jpg"
-    },
-    {
-      title: 'هلتي',
-      image:"../../../../assets/Images/معدات/هلتي.jpg"
-    },
-    {
-      title: 'كومبروسر',
-      image:"../../../../assets/Images/معدات/كومبروسر.jpg"
-    },
-    {
-      title: 'صاروخ',
-      image:"../../../../assets/Images/معدات/صاروخ.jpg"
-    },
-    {
-      title: 'بونطة',
-      image:"../../../../assets/Images/معدات/بونطة.jpg"
-    },
-    {
-      title: 'منشار',
-      image:"../../../../assets/Images/معدات/منشار.jpg"
-    },
-    // Add more projects as needed
-  ];
+  category:Category[]=[];
+
+  constructor(private services:EquipmentsService){}
 
   ngOnInit(): void {
     this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
 
     this.buttonArray= Array(this.pageElement).fill(0).map((_, index) => index + 1);
     console.log("ButtonToArray",this.buttonArray);
+
+    this.getCategories();
   }
 
-  selectedImage:number=0;
+
+  getCategories(){
+    this.services.getCategory(this.pageNumber,this.pageSize).subscribe({
+      next:(value)=> {
+        this.category=value.data;
+
+        this.totalCount=value.totalCount;
+        this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
+        this.buttonArray= Array(this.pageElement).fill(0).map((_, index) => index + 1);
+      },
+    });
+}
+
   totalCount: number = 11;
   pageNumber: number = 1;
-  pageSize: number = 4;
+  pageSize: number = 6;
   pageElement=0;
   buttonArray:number[]=[];
 
-  changeImage(sImage:number){
-    this.selectedImage=sImage;
-    console.log("Image ==>> ",this.selectedImage++);
-    console.log("Image ==>> ",this.selectedImage++);
-    console.log("Image ==>> ",this.selectedImage++);
-  }
-
-  resetImage(num:number){
-    this.selectedImage=0;
-    console.log("Image ==>> ",this.selectedImage);
-    console.log("Image ==>> ",num);
-  }
 
 
   previousPage() {

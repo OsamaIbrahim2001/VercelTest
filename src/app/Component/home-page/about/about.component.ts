@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { About } from 'src/app/Models/about';
+import { AboutService } from 'src/app/Services/About/about.service';
 
 @Component({
   selector: 'app-about',
@@ -7,39 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructionItems:any[]=
- [
-  {
-    name:'إزالة الصبغ',
-    description:'ازالة طبقات الدهان القديمة بسهولة ويسر بمساعدة مقاول إزالة الدهانات القديمة'
-  ,image:"../../../../assets/Images/إزالة الصبغ/1.jpg"
-  },
-  {
-    name:'إنشاء مباني',
-    description:'وتشمل أعمال الأساسات والجدران والأعمدة والادراج زالكمرات والبلاطات والطوب والتصميم'
-  ,image:"../../../../assets/Images/إنشاء مباني/3.jpg"
-  },
-  {
-    name:'إزالة الدهانات',
-    description:'إزالت الدهانات باستخدام معدات خاصة، مثل: مكشطة الدهان أو ورقة صنفرة أو مسدس حراري '
-  ,image:'../../../../assets/Images/ازالة الدهانات/1.jpg'
-  },
-  {
-    name:'تشطيبات',
-    description:'خدمات تشطيب الشقق والفيلات والقصور المتكاملة تشمل كافة أعمال التصميم الداخلي والخارجي'
-  ,image:"../../../../assets/Images/تشطيبات/1.jpg"
-  },
-  {
-    name:'رصف الطرق',
-    description:'هو الطبقة السطحية المتينة الموضوعة في مساحة مخصصة لتتحمل حمولات السير أو المركبات'
-  ,image:"../../../../assets/Images/رصف طريق/1.jpg"
-  },
-  {
-    name:'قص الخرسانة',
-    description:'متخصصون بقص وتخريم الخرسانة المسلحة بأحدث الأجهزة . . متطورون دائما ومعنا افضل الفنيين '
-  ,image:"../../../../assets/Images/قص خرسانة/1.jpg"
-  }
-]
+about:About[]=[];
 
 totalCount: number = 6;
 pageNumber: number = 1;
@@ -48,12 +18,15 @@ pageElement=0;
 buttonArray:number[]=[];
 
 ngOnInit(): void {
+
+  this.getAbout();
   this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
 
   this.buttonArray= Array(this.pageElement).fill(0).map((_, index) => index + 1);
   console.log("ButtonToArray",this.buttonArray);
 }
 
+constructor(private services:AboutService){}
 previousPage() {
   if (this.pageNumber > 1) {
     this.pageNumber--;
@@ -68,5 +41,16 @@ nextPage() {
 
 setPage(pnumber:number){
   this.pageNumber=pnumber;
+}
+
+getAbout(){
+  this.services.getProjects(this.pageNumber,this.pageSize).subscribe({
+    next:(value)=> {
+      this.about=value.data;
+      this.totalCount=value.totalCount;
+      this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
+      this.buttonArray= Array(this.pageElement).fill(0).map((_, index) => index + 1);
+    },
+  });
 }
 }

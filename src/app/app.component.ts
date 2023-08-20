@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HomePageService } from './Services/home-page.service';
 import { ScrollService } from './Shared/scroll.service';
 
 @Component({
@@ -18,7 +17,7 @@ export class AppComponent implements OnInit {
 meetingCount=0;
 
 
-  constructor(private scrollService: ScrollService,private router:Router,private services:HomePageService){}
+  constructor(private scrollService: ScrollService,private router:Router){}
    ngOnInit() {
      }
 

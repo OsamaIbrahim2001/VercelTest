@@ -1,5 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Slider } from 'src/app/Models/slider';
+import { SliderService } from 'src/app/Services/Slider/slider.service';
 
 @Component({
   selector: 'app-slider',
@@ -16,19 +18,19 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class SliderComponent implements OnInit {
-  slides = [
-    { image: '../../../../assets/Images/2.jpg', alt: 'First slide' },
-    { image: '../../../../assets/Images/1.jpg', alt: 'Second slide' },
-    { image: '../../../../assets/Images/2.jpg', alt: 'Third slide' },
-    { image: '../../../../assets/Images/1.jpg', alt: 'Third slide' }
-    // Add more slides as needed with their respective image paths and alt text
-  ];
-
+slider:Slider={
+  id:0,
+  imagesFile:[],
+  images:'',
+  text:''
+}
+constructor(private services:SliderService){}
+slides:any[] = [];
   currentSlideIndex = 0;
   selectedImage='';
 
   ngOnInit() {
-    this.selectedImage=this.slides[this.currentSlideIndex].image;
+    this.getSlider();
     this.startImageSlider();
   }
 
@@ -48,16 +50,29 @@ export class SliderComponent implements OnInit {
 
   nextSlide() {
     this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
-    this.selectedImage=this.slides[this.currentSlideIndex].image;
+    this.selectedImage=this.slides[this.currentSlideIndex];
     // this.showSlide(this.currentSlideIndex);
   }
 
   prevSlide() {
     this.currentSlideIndex = (this.currentSlideIndex - 1 + this.slides.length) % this.slides.length;
 
-    this.selectedImage=this.slides[this.currentSlideIndex].image;
+    this.selectedImage=this.slides[this.currentSlideIndex];
     console.log(this.selectedImage);
 
     // this.showSlide(this.currentSlideIndex);
   }
+
+
+  getSlider (){
+    this.services.getSliderImage().subscribe({
+      next:(value)=>{
+        this.slider=value;
+        this.slides=this.slider.images.split(",");
+        this.selectedImage=this.slides[this.currentSlideIndex];
+        console.log("Selected ==== ",this.selectedImage);
+
+      }
+    })
+}
 }

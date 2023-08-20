@@ -3,14 +3,14 @@
 <div class="container">
   <div class="h2">المعدات</div>
 <br>
-  <div class="card" *ngFor="let item of projects let i=index">
-  <a style="text-decoration: none; color: #ffbb00;" href="equipmentDetails">
+  <div class="card" *ngFor="let item of category let i=index">
+  <a style="text-decoration: none; color: #ffbb00;" [href]="'equipmentDetails/'+item.id">
       <div class="card-image">
-      <img [src]="item.image" alt="Card Image" >
+      <img [src]="'http://localhost:5219/Images/'+item.image" alt="Card Image" >
     </div>
     <div class="card-body">
       <div class="text">
-        <div class="card-title">{{ item.title }}</div>
+        <div class="card-title">{{ item.name }}</div>
       </div>
     </div>
   </a>
