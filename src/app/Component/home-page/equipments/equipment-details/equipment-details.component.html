@@ -32,7 +32,7 @@
 
   <div class="card" *ngIf="equipments[index].image">
       <div class="card-image">
-      <img [src]="'http://localhost:5219/Images/'+equipments[index].image" alt="Card Image" >
+      <img [src]="'https://localhost:5001/Images/'+equipments[index].image" alt="Card Image" >
     </div>
   </div>
   </div>
@@ -58,7 +58,7 @@
           <td>{{item.description}}</td>
           <td>
             <div style=" width: 100px; height: 100px;">
-              <img [src]="'http://localhost:5219/Images/'+item.image" alt="" width="100%" height="100%">
+              <img [src]="'https://localhost:5001/Images/'+item.image" alt="" width="100%" height="100%">
             </div>
           </td>
         </tr>

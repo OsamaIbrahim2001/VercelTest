@@ -1,0 +1,66 @@
+.container{
+  width: 90%;
+margin: 50px auto;
+}
+.text{
+  width: 40%;
+  display: inline;
+  padding: 1%;
+  float: right;
+}
+
+.images{
+  width: 55%;
+  display: inline;
+  text-align: center;
+  margin-bottom: 0;
+  float: left;
+}
+.AImages{
+  display: inline-block;
+  margin: 3px;
+}
+h2{
+  color: #ffbb00;
+  font-family: 'Monadi';
+}
+p{
+  color: white;
+}
+
+
+@media only screen and (max-width: 600px) {
+.Lab{
+  display: none;
+}
+.Mob{
+  display: block;
+}
+}
+
+@media only screen and (min-width: 600px) {
+  .Lab{
+    display: none;
+  }
+  .Mob{
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Lab{
+    display: block;
+  }
+  .Mob{
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

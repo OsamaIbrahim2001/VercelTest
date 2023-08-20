@@ -31,9 +31,9 @@ export class ProjectsComponent implements OnInit {
   }
 
   selectedImage:number=0;
-  totalCount: number = 11;
+  totalCount: number = 0;
   pageNumber: number = 1;
-  pageSize: number = 5;
+  pageSize: number = 6;
   pageElement=0;
   buttonArray:number[]=[];
 
@@ -91,7 +91,7 @@ getProjects(){
   this.services.getProjects(this.pageNumber,this.pageSize).subscribe({
     next:(value)=> {
       this.projects=value.data;
-      console.log("Projects==========>>>>> ",this.projects);
+      console.log("Projecs===========", this.projects);
 
       this.totalCount=value.totalCount;
       this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);

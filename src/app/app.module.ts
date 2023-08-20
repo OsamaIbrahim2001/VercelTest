@@ -40,7 +40,9 @@ import { EquipmentDetailsComponent } from './Component/home-page/equipments/equi
 import { ContactComponent } from './Component/home-page/contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './Component/home-page/card/card.component';
-
+import { AboutDetailsComponent } from './Component/home-page/about/about-details/about-details.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { ProjectDetailsComponent } from './Component/home-page/projects/project-details/project-details.component';
 
 
 
@@ -58,7 +60,9 @@ import { CardComponent } from './Component/home-page/card/card.component';
     EquipmentDetailsComponent,
     ContactComponent,
     FooterComponent,
-    CardComponent
+    CardComponent,
+    AboutDetailsComponent,
+    ProjectDetailsComponent
   ],
 
   imports: [
@@ -82,6 +86,7 @@ import { CardComponent } from './Component/home-page/card/card.component';
     MatPaginatorModule,
     MatTableModule,
     MatCardModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],

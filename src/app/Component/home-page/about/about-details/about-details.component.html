@@ -1,0 +1,28 @@
+<div class="container Lab">
+  <section class="text">
+    <h2>{{work.name}}</h2>
+    <p>{{work.description}}</p>
+
+    <h4 style="color: #ffbb00;">يوجد لدينا عمالة لتنفيذ جميع الاعمال</h4>
+  </section>
+  <section class="images">
+    <div class="mainImage" style="height: 600px;">
+      <video [src]="'https://localhost:5001/Images/'+work.video" width="100%" height="100%" *ngIf="work.video" controls></video>
+      <img [src]="'https://localhost:5001/Images/'+work.image" width="100%" height="100%" alt="" *ngIf="!work.video">
+    </div>
+  </section>
+</div>
+
+<div class="container Mob">
+  <section>
+    <h2>{{work.name}}</h2>
+    <p>{{work.description}}</p>
+  </section>
+  <section>
+    <div class="mainImage" style="height: 400px; position: relative;">
+      <video [src]="'https://localhost:5001/Images/'+work.video" width="100%" height="100%" *ngIf="work.video" controls></video>
+      <img [src]="'https://localhost:5001/Images/'+work.image" width="100%" height="100%" alt="" *ngIf="!work.video">
+    </div>
+  </section>
+</div>
+

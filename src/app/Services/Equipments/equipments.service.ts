@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EquipmentsService {
-  baseUrl: string = "http://localhost:5219/api/EquipmentCategory/";
-  baseUrlDetail: string = "http://localhost:5219/api/EquipmentDetails/";
+  baseUrl: string = "https://localhost:5001/api/EquipmentCategory/";
+  baseUrlDetail: string = "https://localhost:5001/api/EquipmentDetails/";
 
   constructor(private http: HttpClient) {
   }

@@ -8,7 +8,7 @@ import { Slider } from 'src/app/Models/slider';
 })
 export class SliderService {
 
-  baseUrl:string="http://localhost:5219/api/Slider/";
+  baseUrl:string="https://localhost:5001/api/Slider/";
   constructor(private http:HttpClient) { }
 
 

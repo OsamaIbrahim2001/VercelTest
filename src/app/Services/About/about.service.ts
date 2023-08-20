@@ -8,7 +8,7 @@ import { About } from 'src/app/Models/about';
 })
 export class AboutService {
 
-  baseUrl:string="http://localhost:5219/api/About/";
+  baseUrl:string="https://localhost:5001/api/About/";
   constructor(private http:HttpClient) { }
 
   addProject(project:any){
@@ -20,6 +20,10 @@ export class AboutService {
     .set('pageNumber', pageNumber.toString())
     .set('pageSize', pageSize.toString());
     return this.http.get<About[]>(this.baseUrl+"getProjects",{params});
+  }
+
+  getProject(id:number){
+    return this.http.get<About>(this.baseUrl+"getUpdateProject/"+id);
   }
 
 }

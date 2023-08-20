@@ -12,18 +12,20 @@
 <br>
 <div class="container">
   <div class="card" *ngFor="let item of about let i=index">
-    <div class="card-image">
-      <img [src]="'http://localhost:5219/Images/'+item.image" alt="Card Image" >
-    </div>
-    <div class="card-body">
-
-      <div class="text">
-        <div class="card-title">{{ item.name }}</div>
-        <p class="card-text">{{ item.description }}</p>
+    <a [href]="'aboutDetails/'+item.id"  style="text-decoration: none;">
+      <div class="card-image">
+        <img [src]="'https://localhost:5001/Images/'+item.image" alt="Card Image" >
       </div>
+      <div class="card-body">
 
-    </div>
+        <div class="text">
+          <div class="card-title">{{ item.name }}</div>
+          <p class="card-text">{{ item.description }}</p>
+        </div>
+      </div>
+    </a>
   </div>
+
   </div>
 <br>
   <div class="mt-8 py-5 flex justify-content items-center" style="text-align: center;">

@@ -44,6 +44,8 @@
   margin-bottom: 8px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #FFBB00;
+
 }
 .card-text {
   flex-grow: 1;

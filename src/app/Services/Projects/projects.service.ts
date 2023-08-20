@@ -8,7 +8,7 @@ import { Workes } from 'src/app/Models/workes';
 })
 export class ProjectsService {
 
-  baseUrl:string="http://localhost:5219/api/Work/";
+  baseUrl:string="https://localhost:5001/api/Work/";
   constructor(private http:HttpClient) { }
 
   getProjects(pageNumber: number, pageSize: number):Observable<any>{
