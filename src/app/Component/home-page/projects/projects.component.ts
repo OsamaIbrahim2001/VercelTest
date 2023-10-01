@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Workes } from 'src/app/Models/workes';
 import { ProjectsService } from 'src/app/Services/Projects/projects.service';
 
@@ -21,7 +22,7 @@ export class ProjectsComponent implements OnInit {
 
   projects:Workes[] = [];
 
-  constructor(private services:ProjectsService){}
+  constructor(private services:ProjectsService,private router:Router){}
   ngOnInit(): void {
     this.getProjects();
     this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
@@ -49,17 +50,20 @@ export class ProjectsComponent implements OnInit {
   previousPage() {
     if (this.pageNumber > 1) {
       this.pageNumber--;
+      this.getProjects();
     }
   }
 
   nextPage() {
     if (this.pageNumber * this.pageSize < this.totalCount) {
       this.pageNumber++;
+      this.getProjects();
     }
   }
 
   setPage(pnumber:number){
     this.pageNumber=pnumber;
+    this.getProjects();
   }
 
   prevTouchID=-1;
@@ -86,17 +90,22 @@ clearInterval(){
     clearInterval(this.intervalId);
   }
 }
-
+desc:string[]=[];
 getProjects(){
   this.services.getProjects(this.pageNumber,this.pageSize).subscribe({
     next:(value)=> {
       this.projects=value.data;
-      console.log("Projecs===========", this.projects);
-
+      for (let index = 0; index < this.projects.length; index++) {
+        this.desc[index]=this.projects[index].description.length<=126?this.projects[index].description:this.projects[index].description.substring(0,126)+" ..."
+      }
       this.totalCount=value.totalCount;
       this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
       this.buttonArray= Array(this.pageElement).fill(0).map((_, index) => index + 1);
     },
   });
+}
+
+detail(id:number){
+this.router.navigate(['projectDetails/'+id])
 }
 }

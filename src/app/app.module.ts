@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
-import { CommonModule } from '@angular/common';
+import { APP_BASE_HREF, CommonModule } from '@angular/common';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -45,9 +45,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { ProjectDetailsComponent } from './Component/home-page/projects/project-details/project-details.component';
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,7 +85,9 @@ import { ProjectDetailsComponent } from './Component/home-page/projects/project-
     MatCardModule,
     MatSidenavModule
   ],
-  providers: [],
+  providers: [
+    {provide:APP_BASE_HREF,useValue:'/'},
+  ],
   bootstrap: [AppComponent],
 
 })

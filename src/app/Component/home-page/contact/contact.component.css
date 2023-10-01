@@ -1,6 +1,8 @@
 .backImage{
   background-image: url('../../../../assets/Images/cover1.png');
-
+background-size: auto 100%;
+background-repeat: no-repeat;
+background-position: left top;
 }
 .container {
   width: 90%;
@@ -21,9 +23,10 @@ color: #ffbb00;
   width: 100%;
 }
 .contactBtn span{
-  color: white;
+  color: #080808;
   padding: 10px 20px;
   border: solid 2px #ffbb00;
+  background-color: #ffbb00;
   font-size: 24px;
   font-weight: bold;
 }
@@ -44,8 +47,9 @@ color: #ffbb00;
 
 .card-body a{
   text-decoration: none;
-  color: white;
+  color: #080808;
   font-size: 25px;
+  font-weight: 700;
 }
 .card-body a i{
   font-size: 25px;
@@ -72,7 +76,8 @@ font-size: 25px;
 }
 .social a,.location a{
 text-decoration: none;
-color: white;
+color: black;
+font-weight: bold;
 }
 
 .fa-facebook{
@@ -84,6 +89,14 @@ color: white;
 .fa-map-marker{
   margin:0 0 0 15px;
   color: red;
+}
+.fa-envelope{
+  color: white;
+  background-color: red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 50%;
 }
 @media only screen and (max-width: 600px) {
   .card2{

@@ -23,9 +23,13 @@ export class AboutDetailsComponent implements OnInit {
 
   constructor(private services: AboutService, private router: Router, private route: ActivatedRoute) { }
   ngOnInit(): void {
+    const friendlyName = this.route.snapshot.paramMap.get('friendlyName');
+    const encodedId = this.route.snapshot.paramMap.get('id');
+
+     const id = parseInt(atob(encodedId!), 10);
 
     this.route.paramMap.subscribe((params) => {
-      this.projectID = params.get('id');
+      this.projectID = id;
       if (this.projectID != 0) {
         this.services.getProject(this.projectID).subscribe({
           next: (value) => {

@@ -4,9 +4,9 @@
   <div class="h2">المعدات</div>
 <br>
   <div class="card" *ngFor="let item of category let i=index">
-  <a style="text-decoration: none; color: #ffbb00;" [href]="'equipmentDetails/'+item.id">
+  <a style="text-decoration: none; color: #ffbb00; cursor: pointer;" (click)="detail(item.id)">
       <div class="card-image">
-      <img [src]="'https://localhost:5001/Images/'+item.image" alt="Card Image" >
+      <img [src]="'https://api.luluatalshuruk.com/Images/'+item.image" alt="Card Image" >
     </div>
     <div class="card-body">
       <div class="text">
@@ -24,8 +24,8 @@
       <img src="../../../../assets/Images/forward-solid.svg" width="100%" alt=""></button>
 
       <button class="btnNumber" (click)="setPage(index)" *ngFor="let index of buttonArray"
-        [style.color]="index === pageNumber ? 'white' : '#ffbb00'"
-        [style.background-color]="index === pageNumber ? '#ffbb00' : 'initial'">{{index}}</button>
+        [style.color]="index === pageNumber ? 'white' : '#080808'"
+        [style.background-color]="index === pageNumber ? '#797474' : 'initial'">{{index}}</button>
 
       <button class="btnNext" (click)="nextPage()"
         [class.disabled]="pageNumber * pageSize >= totalCount">

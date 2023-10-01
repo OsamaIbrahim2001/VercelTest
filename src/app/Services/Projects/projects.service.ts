@@ -2,13 +2,14 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Workes } from 'src/app/Models/workes';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
 
-  baseUrl:string="https://localhost:5001/api/Work/";
+  baseUrl:string=environment.url+"Work/";
   constructor(private http:HttpClient) { }
 
   getProjects(pageNumber: number, pageSize: number):Observable<any>{

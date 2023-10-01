@@ -1,13 +1,14 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EquipmentsService {
-  baseUrl: string = "https://localhost:5001/api/EquipmentCategory/";
-  baseUrlDetail: string = "https://localhost:5001/api/EquipmentDetails/";
+  baseUrl: string =environment.url+ "EquipmentCategory/";
+  baseUrlDetail: string = environment.url+"EquipmentDetails/";
 
   constructor(private http: HttpClient) {
   }
@@ -15,7 +16,7 @@ export class EquipmentsService {
     const params = new HttpParams()
       .set('pageNumber', pageNumber.toString())
       .set('pageSize', pageSize.toString());
-    return this.http.get(this.baseUrl + "getAllEquipments");
+    return this.http.get(this.baseUrl + "getAllEquipments",{params});
   }
 
   getOneCategory(id: number): Observable<any> {

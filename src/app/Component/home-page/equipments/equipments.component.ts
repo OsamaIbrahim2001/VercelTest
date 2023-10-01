@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Category } from 'src/app/Models/equipments';
 import { EquipmentsService } from 'src/app/Services/Equipments/equipments.service';
 
@@ -11,7 +12,7 @@ export class EquipmentsComponent implements OnInit {
 
   category:Category[]=[];
 
-  constructor(private services:EquipmentsService){}
+  constructor(private services:EquipmentsService,private router:Router){}
 
   ngOnInit(): void {
     this.pageElement=Math.floor(this.totalCount/this.pageSize)+(this.totalCount%this.pageSize>0?1:0);
@@ -35,7 +36,7 @@ export class EquipmentsComponent implements OnInit {
     });
 }
 
-  totalCount: number = 11;
+  totalCount: number = 0;
   pageNumber: number = 1;
   pageSize: number = 6;
   pageElement=0;
@@ -46,16 +47,23 @@ export class EquipmentsComponent implements OnInit {
   previousPage() {
     if (this.pageNumber > 1) {
       this.pageNumber--;
+      this.getCategories();
     }
   }
 
   nextPage() {
     if (this.pageNumber * this.pageSize < this.totalCount) {
       this.pageNumber++;
+      this.getCategories();
     }
   }
 
   setPage(pnumber:number){
     this.pageNumber=pnumber;
+    this.getCategories();
+  }
+
+  detail(id:number){
+    this.router.navigate(['equipmentDetails/'+id]);
   }
 }

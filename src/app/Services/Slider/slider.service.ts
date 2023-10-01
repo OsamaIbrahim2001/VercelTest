@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Slider } from 'src/app/Models/slider';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SliderService {
 
-  baseUrl:string="https://localhost:5001/api/Slider/";
+  baseUrl:string=environment.url+"Slider/";
   constructor(private http:HttpClient) { }
 
 

@@ -2,13 +2,14 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { About } from 'src/app/Models/about';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AboutService {
 
-  baseUrl:string="https://localhost:5001/api/About/";
+  baseUrl:string=environment.url+"About/";
   constructor(private http:HttpClient) { }
 
   addProject(project:any){

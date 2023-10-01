@@ -3,15 +3,15 @@
 <br>
 <div class="container">
   <div class="card" *ngFor="let item of projects let i=index">
-    <a [href]="'projectDetails/'+item.id" style="text-decoration: none;">
+    <a (click)="detail(item.id)" style="text-decoration: none;cursor: pointer;">
       <div *ngIf="item.coverImage!=''" class="card-image" (touchstart)="changeImage(i)"  (mouseenter)="changeImage(i)" (mouseout)="resetImage(i)">
-        <img [src]="'https://localhost:5001/Images/'+item.coverImage" alt="Card Image" >
+        <img [src]="'https://api.luluatalshuruk.com/Images/'+item.coverImage" alt="Card Image" >
       </div>
       <div class="card-body">
 
         <div class="text">
           <div class="card-title">{{ item.name }}</div>
-          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text">{{ desc[i] }}</p>
         </div>
       </div>
     </a>
@@ -25,8 +25,8 @@
       <img src="../../../../assets/Images/forward-solid.svg" width="100%" alt=""></button>
 
       <button class="btnNumber" (click)="setPage(index)" *ngFor="let index of buttonArray"
-        [style.color]="index === pageNumber ? 'white' : '#ffbb00'"
-        [style.background-color]="index === pageNumber ? '#ffbb00' : 'initial'">{{index}}</button>
+        [style.color]="index === pageNumber ? 'white' : '#080808'"
+        [style.background-color]="index === pageNumber ? '#797474' : 'initial'">{{index}}</button>
 
       <button class="btnNext" (click)="nextPage()"
         [class.disabled]="pageNumber * pageSize >= totalCount">

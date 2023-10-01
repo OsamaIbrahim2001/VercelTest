@@ -1,26 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-/* @import "~bootstrap/dist/css/bootstrap.css";*/
+
 @import "~font-awesome/css/font-awesome.min.css";
 
 
-/* Replace 'YourFontName' with the actual name of your font */
 @font-face {
   font-family: 'Monadi';
   src: url('assets/Fonts/Monadi.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Cairo';
-  /* src: url('assets/Fonts/static/Cairo-Bold.ttf') format('truetype'); */
-  /* src: url('assets/Fonts/static/Cairo-Black.ttf') format('truetype'); */
-  /* src: url('assets/Fonts/static/Cairo-ExtraBold.ttf') format('truetype'); */
   src: url('assets/Fonts/CairoVar.ttf') format('truetype');
-   /* src: url('assets/Fonts/static/Cairo-Light.ttf') format('truetype'); */
-  /* src: url('assets/Fonts/static/Cairo-Medium.ttf') format('truetype');
-  src: url('assets/Fonts/static/Cairo-Regular.ttf') format('truetype');
-  src: url('assets/Fonts/static/Cairo-SemiBold.ttf') format('truetype'); */
 }
 
-/* Use 'YourFontName' wherever you want to apply the custom font */
 * {
   font-family: 'Cairo';
 }
@@ -62,7 +52,7 @@
 
 .btnPrev,.btnNext {
   border-radius: 6px;
-  background-color: #ffbb00;
+  background-color: #f9f9f9;
   border: none;
   height: 30px;
   padding-top: 5px;
@@ -79,16 +69,7 @@
   opacity: 50%;
 }
 
-
-/*
-*{
-  font-family: 'Cairo', sans-serif;
-} */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-background-color: black;
+  background-color: #f9f9f9;
 }
-
-/* html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

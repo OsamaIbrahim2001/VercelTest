@@ -26,6 +26,8 @@ export class EquipmentDetailsComponent {
 
       this.catID = params.get('id');
       if (this.catID != 0) {
+        console.log("ID====", this.catID);
+
         this.services.getOneCategory(this.catID).subscribe({
           next: (value) => {
             this.category = value;

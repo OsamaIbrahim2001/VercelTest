@@ -4,24 +4,27 @@
 <div class="header">نبذة عن الشركة</div>
 <div class="description">
 <p style="font-size: 20px;">
-  شركة لؤلؤة الشروق لتأجير المعدات والمقاولات العامة قامت الشركة بالعديد من المشاريع ويمكنك رؤية هذه المشاريع من خلال الموقع <strong style="font-size: 22px; color: white;">ويوجد لدي الشركة العمالة والمعدات الكافية</strong>  لإنشاء كافة المشروعات ولدينا أيضا جميع انواع المعدات للتأجير ويمكنك تصفحها من خلال الموقع
+  <span style="display: block; text-align: center;font-family: 'Monadi'; font-weight: bold; font-size: 24px;">شركة لؤلؤة الشروق</span>
+  <span style="display: block; text-align: center; color: #747272;">لتأجير المعدات والمقاولات العامة بالجبيل</span>
+   <span>
+    قامت الشركة بالعديد من المشاريع ويمكنك رؤية هذه المشاريع من خلال الموقع <strong style="font-size: 22px;">ويوجد لدي الشركة العمالة والمعدات الكافية</strong>  لإنشاء كافة المشروعات ولدينا أيضا جميع انواع المعدات للتأجير ويمكنك تصفحها من خلال الموقع
+   </span>
 </p>
 </div>
 <br>
-  <h2 style="color: white;">خدمات الشركة</h2>
+  <h2 style="color: rgb(11, 11, 11);">خدمات الشركة</h2>
 </div>
 
 <div class="container">
   <div class="card" *ngFor="let item of about let i=index">
-    <a [href]="'aboutDetails/'+item.id"  style="text-decoration: none;">
+    <a (click)="detail(item.id,item.name)"  style="text-decoration: none; cursor: pointer;">
       <div class="card-image">
-        <img [src]="'https://localhost:5001/Images/'+item.image" alt="Card Image" >
+        <img [src]="'https://api.luluatalshuruk.com/Images/'+item.image" alt="Card Image" >
       </div>
       <div class="card-body">
-
         <div class="text">
           <div class="card-title">{{ item.name }}</div>
-          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text">{{ descMob[i] }}</p>
         </div>
       </div>
     </a>
@@ -36,8 +39,8 @@
       <img src="../../../../assets/Images/forward-solid.svg" width="100%" alt=""></button>
 
       <button class="btnNumber" (click)="setPage(index)" *ngFor="let index of buttonArray"
-        [style.color]="index === pageNumber ? 'white' : '#ffbb00'"
-        [style.background-color]="index === pageNumber ? '#ffbb00' : 'initial'">{{index}}</button>
+        [style.color]="index === pageNumber ? 'white' : '#080808'"
+        [style.background-color]="index === pageNumber ? '#797474' : 'initial'">{{index}}</button>
 
       <button class="btnNext" (click)="nextPage()"
         [class.disabled]="pageNumber * pageSize >= totalCount">

@@ -3,13 +3,13 @@
   margin: 0 auto;
 }
 .containers .header{
-  color: #FFBB00;
+  color: #080808;
   font-size: 28px;
   font-family: 'Monadi';
   font-weight: bolder;
 }
 .containers .description{
-  color: #FFBB00;
+  color: #313131;
   font-weight: 500;
 }
 
@@ -21,7 +21,7 @@
 
 .card {
   flex-direction: column;
-  border: 1px solid #ccc;
+  border: 1px solid #828080;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -44,6 +44,7 @@
   margin-bottom: 8px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 22px;
   color: #FFBB00;
 
 }
@@ -99,12 +100,12 @@
   }
 
   .card-title {
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
   }
   .card-text {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 21px;
   }
 
 }
@@ -130,35 +131,35 @@
     max-height: calc(80%);
   }
   .card-title {
-    font-size: 19px;
+    font-size: 22px;
   }
   .card-text {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .card {
-     height: 500px;
+     height: 450px;
     margin-left: 1.5%;
   }
   .card-image {
-    height: 55%;
+    height: 65%;
   }
   .card-body {
-    height: 45%;
+    height: 35%;
   }
   .text{
     max-height: calc(80%);
   }
   .card-title {
-    font-size: 19px;
+    font-size: 23px;
     margin-bottom: 3px;
   }
   .card-text {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 
